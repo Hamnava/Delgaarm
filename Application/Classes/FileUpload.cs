@@ -38,7 +38,7 @@ namespace Application.Classes
         {
             try
             {
-                string Fullpath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/Img/" + folder + "/" + imgname);
+                string Fullpath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/" + imgname);
                 if (File.Exists(Fullpath))
                 {
                     File.Delete(Fullpath);

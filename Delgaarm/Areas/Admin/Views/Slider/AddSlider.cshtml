@@ -1,0 +1,135 @@
+﻿@model SliderViewModel
+
+@{
+    ViewData["Title"] = "Add Category";
+}
+
+<div class="right_col" role="main">
+
+
+    <div class="panel panel-heading" style="box-shadow:3px 1px 1px 0 gray; border-radius:2px;">
+        <span style="font-weight:bold;">
+            <i class="glyphicon glyphicon-plus"></i>
+            فرم ایجاد کتگوری جدید
+        </span>
+    </div>
+
+    <div class="panel panel-body container-fluid" style="border-radius:2px; box-shadow:3px 1px 1px 0 gray; background-color:#e6e2e2;">
+        <form asp-controller="Slider" asp-action="AddSlider" method="post" enctype="multipart/form-data">
+
+            <div class="col-md-6 col-xs-12">
+
+
+                <!--silderName-->
+                <div>
+                    <label asp-for="silderName" class="control-label col-md-3 col-xs-12"></label>
+                    <div class="col-md-9 col-xs-12">
+                        <input asp-for="silderName" type="text" class="form-control custominput" placeholder="نام  ..." autocomplete="off" />
+                        <span asp-validation-for="silderName" class="text-danger"></span>
+                    </div>
+                </div>
+                
+                <!--Caption-->
+                <div>
+                    <label asp-for="Caption" class="control-label col-md-3 col-xs-12"></label>
+                    <div class="col-md-9 col-xs-12">
+                        <input asp-for="Caption" type="text" class="form-control custominput" placeholder="نام  ..." autocomplete="off" />
+                        <span asp-validation-for="Caption" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <!--Alt-->
+                <div>
+                    <label asp-for="Alt" class="control-label col-md-3 col-xs-12"></label>
+                    <div class="col-md-9 col-xs-12">
+                        <input asp-for="Alt" type="text" class="form-control custominput" placeholder="Alt ..." autocomplete="off" />
+                        <span asp-validation-for="Alt" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <!--title-->
+                <div>
+                    <label asp-for="Title" class="control-label col-md-3 col-xs-12"></label>
+                    <div class="col-md-9 col-xs-12">
+                        <input asp-for="Title" type="text" class="form-control custominput" placeholder="  Title ..." autocomplete="off" />
+                        <span asp-validation-for="Title" class="text-danger"></span>
+                    </div>
+                </div>
+                 <!--price-->
+                <div>
+                    <label asp-for="price" class="control-label col-md-3 col-xs-12"></label>
+                    <div class="col-md-9 col-xs-12">
+                        <input asp-for="price" type="text" class="form-control custominput" placeholder="price  ..." autocomplete="off" />
+                        <span asp-validation-for="price" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <!--sliderOrder-->
+                <div>
+                    <label asp-for="sliderOrder" class="control-label col-md-3 col-xs-12"></label>
+                    <div class="col-md-9 col-xs-12">
+                        <input asp-for="sliderOrder" type="text" class="form-control custominput" placeholder="order ..." autocomplete="off" />
+                        <span asp-validation-for="sliderOrder" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <!--IsDelete-->
+                <div>
+                    <label asp-for="IsDelete" class="control-label col-md-3 col-xs-12" style="margin-top:10px;"></label>
+                    <div class="col-md-9 col-xs-12" style="margin-top:10px;">
+                        <label class="col-md-3 col-xs-6">
+                            <input asp-for="IsDelete" type="radio" name="IsDelete" value="true"  />
+                            حذف شود
+                        </label>
+                        <label class="col-md-3 col-xs-6">
+                            <input asp-for="IsDelete" type="radio" name="IsDelete" value="false" checked/>
+                            حذف نشود
+                        </label>
+                    </div>
+                </div>
+
+                 <!--IsActive-->
+                <div>
+                    <label asp-for="IsActive" class="control-label col-md-3 col-xs-12" style="margin-top:10px;"></label>
+                    <div class="col-md-9 col-xs-12" style="margin-top:10px;">
+                        <label class="col-md-3 col-xs-6">
+                            <input asp-for="IsActive" type="radio" name="IsActive" value="true" checked />
+                           فعال
+                        </label>
+                        <label class="col-md-3 col-xs-6">
+                            <input asp-for="IsActive" type="radio" name="IsActive" value="false" />
+                          غیر فعال
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-6 col-xs-12">
+
+               
+
+                <!--Profile-->
+                <div>
+                    <label  class="control-label col-md-3 col-xs-12">عکس سلایدر</label>
+                    <div class="col-md-9 col-xs-12">
+                        <input asp-for="sliderImage" name="file" type="file" class="form-control custominput" placeholder="پروفایل ..." autocomplete="off" />
+
+                        <span asp-validation-for="sliderImage" class="text-danger"></span>
+                    </div>
+                </div>
+
+
+
+                <div class="col-xs-12 form-group" style="margin-top:15px;">
+                    <input type="submit" style="border:1px solid gray; border-radius:3px;"
+                           value="ثبت سلایدر جدید" class="btn pull-right" />
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+
+</div>
+

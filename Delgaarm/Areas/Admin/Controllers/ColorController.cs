@@ -50,7 +50,7 @@ namespace Delgaarm.Areas.Admin.Controllers
         }
 
 
-        public async Task<IActionResult> Details(string id)
+        public async Task<IActionResult> Details(int id)
         {
             var color = await _context.ProductColorUW.GetByIdAsync(id);
             return View(color);
@@ -58,7 +58,7 @@ namespace Delgaarm.Areas.Admin.Controllers
 
 
         [HttpGet]
-        public async Task<IActionResult> EditColor(string id)
+        public async Task<IActionResult> EditColor(int id)
         {
             var color = await _context.ProductColorUW.GetByIdAsync(id);
             var data = _mapper.Map<EditColorViewModel>(color);

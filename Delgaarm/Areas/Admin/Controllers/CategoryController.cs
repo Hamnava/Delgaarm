@@ -44,7 +44,7 @@ namespace Delgaarm.Areas.Admin.Controllers
             }
             if (file == null)
             {
-                ModelState.AddModelError("Category", "لطفا یک عکس برای کاربر انتخاب نمایید.");
+                ModelState.AddModelError("CategoryPhoto", "لطفا یک عکس برای کاربر انتخاب نمایید.");
                 return View(model);
 
             }
@@ -59,15 +59,11 @@ namespace Delgaarm.Areas.Admin.Controllers
         }
 
 
-        public async Task<IActionResult> Details(string id)
-        {
-            var category = await _context.CategoryUW.GetByIdAsync(id);
-            return View(category);
-        }
+     
 
 
         [HttpGet]
-        public async Task<IActionResult> EditCategory(string id)
+        public async Task<IActionResult> EditCategory(int id)
         {
             var category = await _context.CategoryUW.GetByIdAsync(id);
             var mapCategory = _mapper.Map<EditCategoryViewModel>(category);

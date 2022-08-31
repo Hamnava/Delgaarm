@@ -18,7 +18,7 @@ namespace Application.ViewModels
 
         public int sliderOrder { get; set; }
 
-        public string? sliderImage { get; set; }
+        public string sliderImage { get; set; }
         public string Alt { get; set; }
         public string Title { get; set; }
 
