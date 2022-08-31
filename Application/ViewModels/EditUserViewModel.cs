@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace Application.ViewModels
 {
-    public class UserViewModel
+    public class EditUserViewModel
     {
         [Display(Name = "جنس")]
-        [Required(ErrorMessage ="این فیلد نمیتواند خالی باشد")]
+        [Required(ErrorMessage = "این فیلد نمیتواند خالی باشد")]
         public string Gender { get; set; }
         [Display(Name = "نام کاربری")]
         [Required(ErrorMessage = "این فیلد نمیتواند خالی باشد")]
-        //public string Id { get; set; }
+        public string Id { get; set; }
         public string UserName { get; set; }
         [Display(Name = "نام کامل")]
         [Required(ErrorMessage = "این فیلد نمیتواند خالی باشد")]
@@ -30,6 +30,7 @@ namespace Application.ViewModels
         public string Profile { get; set; }
 
         public bool IsActive { get; set; }
+        public bool IsDelete { get; set; }
         public bool IsAdmin { get; set; }
         [Display(Name = "کشور")]
         [Required(ErrorMessage = "این فیلد نمیتواند خالی باشد")]

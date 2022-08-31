@@ -1,0 +1,32 @@
+﻿@model ApplicationUser
+
+<form asp-controller="UserManager" asp-action="ActiveDeActiveUserPost" method="post">
+    <div class="modal-header" style="background-color:@ViewBag.theme; color:white; border-radius:5px 5px 0 0;">
+        <button type="button" class="close pull-left" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">@ViewBag.ViewTitle</h4>
+    </div>
+
+    @if (Model.IsActive)
+    {
+        <div class="modal-body form-horizontal">
+            آیا از غیر فعال سازس اکانت کاربر با نام
+            <span class="font-weight-bold">@Model.FullName</span>
+            مطمن هستید؟
+        </div>
+    }
+    else
+    {
+        <div class="modal-body form-horizontal">
+            آیا از فعال سازس اکانت کاربر با نام
+            <span class="font-weight-bold">@Model.FullName</span>
+            مطمن هستید؟
+        </div>
+    }
+
+    <input type="hidden" asp-for="Id" />
+    <input type="hidden" asp-for="IsActive" />
+    <div class="modal-footer" style="text-align:left">
+        <button type="button" data-dismiss="modal" style="width:80px" class="btn btn-default">بازگشت</button>
+        <button type="submit"class="btn" style="width:80px; color:white; background-color:@ViewBag.theme">تایید</button>
+    </div>
+</form>

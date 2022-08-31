@@ -1,0 +1,125 @@
+﻿@model ApplicationUser
+@{
+    ViewData["Title"] = "UserDetails";
+}
+<style>
+    .mymargin{
+        margin-bottom:15px;
+    }
+</style>
+<div class="right_col" role="main">
+    <div class="panel panel-heading" style="box-shadow:3px 1px 1px 0 gray; border-radius:2px;">
+        <span style="font-weight:bold;">
+            <i class="glyphicon glyphicon-user"></i>
+            مشخصات کاربر
+        </span>
+    </div>
+
+    <div class="panel panel-body container-fluid"
+         style="border-radius:2px; box-shadow:3px 1px 1px 0 gray; background-color:#e6e2e2;">
+
+        <div style="margin-bottom:10px;">
+            <div class="col-md-6 col-xs-12">
+
+
+                <div>
+                    <span style="font-weight:bold">نام : </span>
+                    <span style="color:darkgreen;">@Model.FullName</span>
+                </div>
+                <br />
+                <div>
+                    <span style="font-weight:bold">کشور : </span>
+                    <span style="color:darkgreen;">@Model.Country</span>
+                </div>
+                <br />
+                <div>
+                    <span style="font-weight:bold"> شهر : </span>
+                    <span style="color:darkgreen;">@Model.City</span>
+                </div>
+                <br />
+                <div>
+                    <span style="font-weight:bold">وضعیت کاربر : </span>
+                    <span style="color:darkgreen;">@(Model.IsAdmin== true ? " ادمین" : "کاربر")</span>
+                </div>
+                <br />
+                <div>
+                    <span style="font-weight:bold">آدرس پستی : </span>
+                    <span style="color:darkgreen;">@Model.PostalAddress</span>
+                </div>
+                <br />
+                 <div>
+                    <span style="font-weight:bold">تاریخ ثبت نام در ویب سایت : </span>
+                    <span style="color:darkgreen;">@Model.RegisterDate.ToString("dddd, dd MMMM yyyy")</span>
+                </div>
+                <br />
+                <div>
+                    <span style="font-weight:bold">ایمیل : </span>
+                    <span style="color:darkgreen;">@Model.Email</span>
+                </div>
+                <br />
+                <div>
+                    <span style="font-weight:bold">موبایل : </span>
+                    <span style="color:darkgreen;">@Model.PhoneNumber</span>
+                </div>
+               
+                <div>
+                    <span style="font-weight:bold">وضعیت : </span>
+                    @if (Model.IsActive)
+                    {
+
+                        <span style="color:darkgreen;">فعال</span>
+                    }
+                    else
+                    {
+                        <span style="color:red;">غیرفعال</span>
+                    }
+                </div>
+
+                <br />
+                <div>
+                    <span style="font-weight:bold">جنسیت : </span>
+                    @if (Model.Gender == "Male")
+                    {
+                        <span style="color:darkgreen;">مرد </span>
+                    }
+                    else
+                    {
+                        <span style="color:darkgreen;">زن</span>
+                    }
+                </div>
+                <br />
+
+               
+
+
+
+            </div>
+
+
+            <div class="col-md-6 col-xs-12">
+                <div>
+                    <span style="font-weight:bold;" class="col-md-4">تصویر : </span>
+                    <div class="col-md-8" style="margin-bottom:15px;">
+                        <img src="~/@Model.Profile" style="width:175px; height:200px;
+                                border:1px solid gray; border-radius:3px;" />
+
+                    </div>
+                </div>
+
+               
+            </div>
+
+            <hr style="height:1px; background-color:gray; margin-top:10px;" class="col-md-12 col-xs-12 row" />
+
+
+            <div class="col-xs-12 form-group" style="margin-top:15px;">
+
+                <a asp-controller="UserManager" asp-action="Index" class="btn pull-right"
+                   style="border:1px solid gray; border-radius:3px; color:black; margin-left:10px; width:70px;">بازگشت</a>
+
+                <a href="#" style="border:1px solid gray; border-radius:3px; color:black; margin-left:10px; width:70px;" class="btn pull-right">چاپ</a>
+            </div>
+        </div>
+
+    </div>
+</div>

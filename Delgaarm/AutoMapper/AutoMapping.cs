@@ -9,6 +9,7 @@ namespace Delgaarm.AutoMapper
         public AutoMapping()
         {
             CreateMap<ApplicationUser, UserViewModel>().ReverseMap();
+            CreateMap<ApplicationUser, EditUserViewModel>().ReverseMap();
             CreateMap<ApplicationUser, ChangePasswordByAdminViewModel>().ReverseMap();
             CreateMap<Product, ProductViewModel>().ReverseMap();
             CreateMap<ContactUs, ContuctUsViewModel>().ReverseMap();

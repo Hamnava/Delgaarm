@@ -1,0 +1,188 @@
+﻿@model EditUserViewModel
+
+@{
+    ViewData["Title"] = "Edit User";
+}
+
+<div class="right_col" role="main">
+
+
+    <div class="panel panel-heading" style="box-shadow:3px 1px 1px 0 gray; border-radius:2px;">
+        <span style="font-weight:bold;">
+            <i class="glyphicon glyphicon-plus"></i>
+            فرم ویرایش کاربر جدید
+        </span>
+    </div>
+
+    <div class="panel panel-body container-fluid" style="border-radius:2px; box-shadow:3px 1px 1px 0 gray; background-color:#e6e2e2;">
+        <form asp-controller="UserManager" asp-action="EditUser" method="post" enctype="multipart/form-data">
+
+            <div class="col-md-6 col-xs-12">
+
+                <input asp-for="Id" hidden />
+                <!--firstName-->
+                <div>
+                    <label asp-for="FullName" class="control-label col-md-3 col-xs-12"></label>
+                    <div class="col-md-9 col-xs-12">
+                        <input asp-for="FullName" type="text" class="form-control custominput" placeholder="نام  ..." autocomplete="off" />
+                        <span asp-validation-for="FullName" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <!--family-->
+                <div>
+                    <label asp-for="Country" class="control-label col-md-3 col-xs-12"></label>
+                    <div class="col-md-9 col-xs-12">
+                        <input asp-for="Country" type="text" class="form-control custominput" placeholder="کشور ..." autocomplete="off" />
+                        <span asp-validation-for="Country" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <!--personalcode-->
+                <div>
+                    <label asp-for="City" class="control-label col-md-3 col-xs-12"></label>
+                    <div class="col-md-9 col-xs-12">
+                        <input asp-for="City" type="text" class="form-control custominput" placeholder="  شهر ..." autocomplete="off" />
+                        <span asp-validation-for="City" class="text-danger"></span>
+                    </div>
+                </div>
+
+
+
+                <!--mobile-->
+                <div>
+                    <label asp-for="PhoneNumber" class="control-label col-md-3 col-xs-12"></label>
+                    <div class="col-md-9 col-xs-12">
+                        <input asp-for="PhoneNumber" type="text" class="form-control custominput" placeholder="شماره موبایل ..." autocomplete="off" />
+                        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <!--username-->
+                <div>
+                    <label asp-for="UserName" class="control-label col-md-3 col-xs-12"></label>
+                    <div class="col-md-9 col-xs-12">
+                        <input asp-for="UserName" type="text" class="form-control custominput" placeholder="نام کاربری ..." autocomplete="off" />
+                        <span asp-validation-for="UserName" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <!--email-->
+                <div>
+                    <label asp-for="Email" class="control-label col-md-3 col-xs-12"></label>
+                    <div class="col-md-9 col-xs-12">
+                        <input asp-for="Email" type="text" class="form-control custominput" placeholder="ایمیل ..." autocomplete="off" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                </div>
+
+
+                <!--gender-->
+                <div>
+                    <label asp-for="Gender" class="control-label col-md-3 col-xs-12"></label>
+                    <div class="col-md-9 col-xs-12">
+                        <select class="form-control" asp-for="Gender" class="form-select">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!--IsAdmin-->
+                <div>
+                    <label  class="control-label col-md-3 col-xs-12" style="margin-top:10px;"></label>
+                    <div class="col-md-9 col-xs-12" style="margin-top:10px;">
+                        <label class="col-md-3 col-xs-6">
+                            <input asp-for="IsAdmin" type="radio" name="IsAdmin" value="true"  />
+                            ادمین
+                        </label>
+                        <label class="col-md-3 col-xs-6">
+                            <input asp-for="IsAdmin" type="radio" name="IsAdmin" value="false" />
+                            کاربر
+                        </label>
+                    </div>
+                </div>
+
+                 <!--IsDelete-->
+                <div>
+                    <label class="control-label col-md-3 col-xs-12" style="margin-top:10px;"></label>
+                    <div class="col-md-9 col-xs-12" style="margin-top:10px;">
+                        <label class="col-md-5 col-xs-6">
+                            <input asp-for="IsDelete" type="radio" name="IsDelete" value="true"  />
+                            حذف شود
+                        </label>
+                        <label class="col-md-5 col-xs-6">
+                            <input asp-for="IsDelete" type="radio" name="IsDelete" value="false" />
+                            حذف نشود
+                        </label>
+                    </div>
+                </div>
+
+                 <!--IsActive-->
+                <div>
+                    <label class="control-label col-md-3 col-xs-12" style="margin-top:10px;"></label>
+                    <div class="col-md-9 col-xs-12" style="margin-top:10px;">
+                        <label class="col-md-5 col-xs-6">
+                            <input asp-for="IsActive" type="radio" name="IsActive" value="true"  />
+                            فعال
+                        </label>
+                        <label class="col-md-5 col-xs-6">
+                            <input asp-for="IsActive" type="radio" name="IsActive" value="false" />
+                            غیر فعال
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-xs-12">
+               
+                <!--Address-->
+                <div>
+                    <label asp-for="PostalAddress" class="control-label col-md-3 col-xs-12"></label>
+                    <div class="col-md-9 col-xs-12">
+                        <textarea asp-for="PostalAddress" type="text" class="form-control custominput" placeholder=" آدرس پستی  ..." autocomplete="off">
+                        </textarea>
+                        <span asp-validation-for="PostalAddress" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <!--Profile-->
+                <div>
+                    <label class="control-label col-md-3 col-xs-12">پروفایل</label>
+                    <div class="col-md-9 col-xs-12">
+                        <input type="hidden" asp-for="Profile" />
+                        <input name="file" type="file" class="form-control mb-3">
+                        
+                         <img src="~/@Model.Profile" alt="@Model.FullName" title="@Model.FullName" class="img-responsive img-thumbnail " />
+
+                        
+                    </div>
+                </div>
+               
+
+                <div class="col-xs-12 form-group" style="margin-top:15px;">
+                    <input type="submit" style="border:1px solid gray; border-radius:3px;"
+                           value="ثبت تغیرات" class="btn pull-right" />
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+
+</div>
+
+
+@section AdminScript{
+
+
+    <script>
+        $("#UserName").on('keyup', function(event) {
+            var pattern = /^[a-zA-Z0-9]*$/;
+            if (!pattern.test(event.key)) {
+                $('#UserName').val("");
+            }
+        });
+
+    </script>
+}

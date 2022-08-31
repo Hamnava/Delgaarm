@@ -58,12 +58,13 @@
                 <tr>
                     <td>ردیف</td>
                     <td>نام</td>
-                    <td>فامیلی</td>
                     <td>شماره تماس</td>
-                    <td>کدپرسنلی</td>
-                    <td>نام کاربری</td>
+                    <td> کشور</td>
+                    <td>شهر</td>
+                    <td>ایمیل</td>
+                    <td>ثبت نام در تاریخ</td>
                     <td>تصویر</td>
-                    <td>امضا</td>
+                   
                     <td>وضعیت</td>
                     <td>عملیات</td>
                 </tr>
@@ -75,9 +76,12 @@
                         <td style="width:60px; text-align:center;">@counter</td>
                         <td style="text-align:right;">@item.FullName</td>
                         <td>@item.PhoneNumber</td>
-                        <td>@item.UserName</td>
+                        <td>@item.Country</td>
+                        <td>@item.City</td>
+                        <td>@item.Email</td>
+                        <td>@item.RegisterDate.ToString("MMMM dd yyyy")</td>
                         <td style="padding:2px; text-align:center;">
-                            <img src="~/upload/userimage/@item.Profile" style="width:60px; height:65px;" />
+                            <img src="~/@item.Profile" style="width:60px; height:65px;" />
                         </td>
                         
 
@@ -100,14 +104,14 @@
                         <td>
 
                             <div class="row">
-                                <a asp-controller="UserManager" asp-action="UserDetails" asp-route-userId="@item.Id"
+                                <a asp-controller="UserManager" asp-action="Details" asp-route-id="@item.Id"
                                    style="height:30px; width:40px; font-size:10px; margin-bottom:3px;"
                                    class="btn btn-info" title="جزییات">
                                     <i class="glyphicon glyphicon-book"></i>
 
                                 </a>
 
-                                <a asp-controller="UserManager" asp-action="EditUser" asp-route-userId="@item.Id"
+                                <a asp-controller="UserManager" asp-action="EditUser" asp-route-id="@item.Id"
                                    style="height:30px; width:40px; font-size:10px; margin-bottom:3px;"
                                    class="btn btn-warning" title="ویرایش">
                                     <i class="glyphicon glyphicon-edit"></i>
@@ -156,7 +160,7 @@
 </div>
 
 
-@*@Html.Partial("_Modal", new BootstrapModel { ID = "modal-action", Size = BootstrapModel.ModalSize.Large })*@
+@Html.Partial("_Modal", new BootstrapModel { ID = "modal-action", Size = BootstrapModel.ModalSize.Large })
 
 @section AdminScript{
     <script src="~/js/modal/modal.js"></script>

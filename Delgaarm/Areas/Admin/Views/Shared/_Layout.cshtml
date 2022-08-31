@@ -40,7 +40,15 @@
                     <div class="clearfix"></div>
 
                     <!-- menu profile quick info -->
-               
+                    <div class="profile clearfix">
+                        <div class="profile_pic">
+                            <img src="~/admin.png" alt="..." class="img-circle profile_img">
+                        </div>
+                        <div class="profile_info">
+                            <span>ادمین سیستم</span>
+                            <h2>نعمت الله حسینی </h2>
+                        </div>
+                    </div>
                     <!-- /menu profile quick info -->
 
                     <br />
@@ -86,12 +94,12 @@
                                     <a asp-controller="RolePattern" asp-action="Index"><i class="fa fa-blind"></i> نقش های کاربری   <span class="fa fa-chevron-down"></span></a>
                                 </li>
                                 @*<li>
-            <a><i class="fa fa-bar-chart-o"></i> ارائه داده <span class="fa fa-chevron-down"></span></a>
-            <ul class="nav child_menu">
+                                <a><i class="fa fa-bar-chart-o"></i> ارائه داده <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
 
-                <li><a href="other_charts.html">چارت  </a></li>
-            </ul>
-        </li>*@
+                                <li><a href="other_charts.html">چارت  </a></li>
+                                </ul>
+                                </li>*@
 
                             </ul>
                         </div>
@@ -172,27 +180,27 @@
                         <div class="nav toggle">
                             <a id="menu_toggle"><i class="fa fa-bars"></i></a>
                         </div>
-
+                       
                         <ul class="nav navbar-nav navbar-right">
                             <li class="">
                                 <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown"
                                    aria-expanded="false">
-                                
-                                    <span class=" fa fa-angle-down"></span>
+                                    <img src="~/admin.png" alt="نعمت الله حسینی" title="نعمت الله حسینی"> 
+                                    
                                 </a>
-                                    <ul class="dropdown-menu dropdown-usermenu pull-right">
-                                        <li><a href="javascript:;"> نمایه</a></li>
-                                        <li>
-                                            <a href="javascript:;">
-                                                <span class="badge bg-red pull-right">50%</span>
-                                                <span>تنظیمات</span>
-                                            </a>
-                                        </li>
-                                        <li><a href="javascript:;">کمک</a></li>
-                                        <form asp-controller="Account" asp-action="LogOut" method="post" asp-area="">
-                                            <li><button type="submit" style="border:none; background-color:white;"><i class="fa fa-sign-out pull-right"></i> خروج</button></li>
-                                        </form>
-                                    </ul>
+                                <ul class="dropdown-menu dropdown-usermenu pull-right">
+                                    <li><a href="javascript:;"> نمایه</a></li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <span class="badge bg-red pull-right">50%</span>
+                                            <span>تنظیمات</span>
+                                        </a>
+                                    </li>
+                                    <li><a href="javascript:;">کمک</a></li>
+                                    <form asp-controller="Account" asp-action="LogOut" method="post" asp-area="">
+                                    <li><button type="submit" style="border:none; background-color:white;"><i class="fa fa-sign-out pull-right"></i> خروج</button></li>
+                                    </form>
+                                </ul>
                             </li>
 
                             <li role="presentation" class="dropdown">

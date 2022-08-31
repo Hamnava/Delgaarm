@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Application.Classes
 {
-    public class UploadFiles
+    public class FileUpload
     {
 
         // Create file and store that to server

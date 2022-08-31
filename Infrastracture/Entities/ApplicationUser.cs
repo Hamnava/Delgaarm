@@ -10,6 +10,7 @@ namespace Infrastracture.Entities
     public class ApplicationUser : IdentityUser
     {
         public string FullName { get; set; }
+        public string Gender { get; set; }
         public string Profile { get; set; }
         public string EmailPassword { get; set; }
         public string ActiveCode { get; set; }
@@ -20,8 +21,7 @@ namespace Infrastracture.Entities
         public List<Order> orders { get; set; }
         public string Country { get; set; }
         public string City { get; set; }
-        public string Street { get; set; }
-        public string PostalCode { get; set; }
+        public string PostalAddress { get; set; }
 
     }
 }
