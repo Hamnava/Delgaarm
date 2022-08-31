@@ -9,6 +9,8 @@ namespace Infrastracture.Entities
 {
     public class ApplicationUser : IdentityUser
     {
+        public string FullName { get; set; }
+        public string Profile { get; set; }
         public string EmailPassword { get; set; }
         public string ActiveCode { get; set; }
         public bool IsDelete { get; set; }

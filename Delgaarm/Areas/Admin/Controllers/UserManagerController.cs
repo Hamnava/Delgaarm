@@ -9,7 +9,6 @@ using Microsoft.AspNetCore.Mvc;
 namespace Delgaarm.Areas.Admin.Controllers
 {
     [Area("Admin")]
-
     public class UserManagerController : Controller
     {
         private readonly UserManager<ApplicationUser> _usermanager;

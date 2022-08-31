@@ -1,5 +1,8 @@
+using Application.Repositories.Interfaces;
+using Application.Repositories.Services;
 using AspNetCoreHero.ToastNotification;
 using AspNetCoreHero.ToastNotification.Extensions;
+using Delgaarm.AutoMapper;
 using Infrastracture.Context;
 using Infrastracture.Entities;
 using Microsoft.AspNetCore.Identity;
@@ -23,6 +26,13 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>(option =>
     option.Password.RequireUppercase = false;
 }).AddEntityFrameworkStores<ApplicationContext>()
     .AddDefaultTokenProviders();
+
+#region RegisterInterfaces
+//Recognizing the interface
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+builder.Services.AddAutoMapper(typeof(AutoMapping).Assembly);
+
+#endregion
 
 
 // Add services to the container.
