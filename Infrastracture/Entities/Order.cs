@@ -21,7 +21,7 @@ namespace Infrastracture.Entities
         public DateTime OrderTime { get; set; } = DateTime.UtcNow;
 
 
-        public string OrderStatus { get; set; } = "Pending";
+        public string OrderStatus { get; set; } = "در حال بررسی";
 
 
         public string PaymentStatus { get; set; }

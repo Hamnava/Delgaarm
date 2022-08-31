@@ -16,6 +16,10 @@ namespace Infrastracture.Entities
         public bool IsAdmin { get; set; }
         public DateTime RegisterDate { get; set; } = DateTime.UtcNow;
         public List<Order> orders { get; set; }
+        public string Country { get; set; }
+        public string City { get; set; }
+        public string Street { get; set; }
+        public string PostalCode { get; set; }
 
     }
 }

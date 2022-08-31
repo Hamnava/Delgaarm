@@ -15,14 +15,13 @@ namespace Infrastracture.Entities
         public string ProductName { get; set; }
         public bool IsBestSeller { get; set; }
         public byte producStars { get; set; }
-
+        public string TekaType { get; set; }
         public string? ProductImage { get; set; }
         public string Alt { get; set; }
         public string Title { get; set; }
 
-        public string ShortDescription { get; set; }
-        public string Instalations { get; set; }
-        public string OverView { get; set; }
+        public string Description { get; set; }
+       
         public DateTime ProductCreate { get; set; }
         public float MainPrice { get; set; }
         public int? sepcialprice { get; set; }
