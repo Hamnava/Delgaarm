@@ -10,7 +10,6 @@
     <Folder Include="Classes\" />
     <Folder Include="Repositories\Interfaces\" />
     <Folder Include="Repositories\Services\" />
-    <Folder Include="ViewModels\" />
   </ItemGroup>
 
 </Project>
