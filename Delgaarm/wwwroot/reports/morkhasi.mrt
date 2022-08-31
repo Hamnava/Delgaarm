@@ -1,0 +1,580 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="0" />
+    <DataSources isList="true" count="0" />
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Variables isList="true" count="13">
+      <value>,printdate,printdate,System.String,,False,False</value>
+      <value>,leavetype,leavetype,System.String,,False,False</value>
+      <value>,sender_fullname,sender_fullname,System.String,,False,False</value>
+      <value>,jobname,jobname,System.String,,False,False</value>
+      <value>,fromtime,fromtime,System.String,,False,False</value>
+      <value>,totime,totime,System.String,,False,False</value>
+      <value>,time_day,time_day,System.String,,False,False</value>
+      <value>,leaveday,leaveday,System.String,,False,False</value>
+      <value>,fromdate,fromdate,System.String,,False,False</value>
+      <value>,todate,todate,System.String,,False,False</value>
+      <value>,confirm_fullname,confirm_fullname,System.String,,False,False</value>
+      <value>,request_signature,request_signature,System.Drawing.Image,,False,False</value>
+      <value>,confirm_signature,confirm_signature,System.Drawing.Image,,False,False</value>
+    </Variables>
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="2" type="Page" isKey="true">
+      <Border>All;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="30">
+        <PageHeaderBand1 Ref="3" type="PageHeaderBand" isKey="true">
+          <Brush>[219:238:243]</Brush>
+          <ClientRectangle>0,0.2,5.22,1</ClientRectangle>
+          <Components isList="true" count="7">
+            <Image1 Ref="4" type="Image" isKey="true">
+              <Brush>[219:238:243]</Brush>
+              <ClientRectangle>2.3,0,0.5,0.5</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <File>C:\Users\Hamnava\Desktop\logo.png</File>
+              <Name>Image1</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Stretch>True</Stretch>
+            </Image1>
+            <Text1 Ref="5" type="Text" isKey="true">
+              <Brush>[219:238:243]</Brush>
+              <ClientRectangle>1.4,0.5,2.2,0.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,13</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text1</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>شرکت تکنالوژی و خدماتی انارسافت</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text1>
+            <Text2 Ref="6" type="Text" isKey="true">
+              <Brush>[219:238:243]</Brush>
+              <ClientRectangle>1.2,0.7,2.7,0.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,13</Font>
+              <Guid>e59a7205cb6f476e9e6c450d8efc3275</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text2</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>فرم درخواستی مرخصی</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text2>
+            <Text3 Ref="7" type="Text" isKey="true">
+              <Brush>[219:238:243]</Brush>
+              <ClientRectangle>3.8,0.2,0.9,0.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,13</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text3</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>{printdate}</Text>
+              <TextBrush>Black</TextBrush>
+            </Text3>
+            <Text4 Ref="8" type="Text" isKey="true">
+              <Brush>[219:238:243]</Brush>
+              <ClientRectangle>4.7,0.2,0.5,0.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,13</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text4</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>: تاریخ</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text4>
+            <Text6 Ref="9" type="Text" isKey="true">
+              <Brush>[219:238:243]</Brush>
+              <ClientRectangle>0.8,0.2,0.9,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,13</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text6</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>: نوعیت</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text6>
+            <Text5 Ref="10" type="Text" isKey="true">
+              <Brush>[219:238:243]</Brush>
+              <ClientRectangle>0,0.2,0.8,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,13</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text5</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>{leavetype}</Text>
+              <TextBrush>Black</TextBrush>
+            </Text5>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>PageHeaderBand1</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+        </PageHeaderBand1>
+        <Text7 Ref="11" type="Text" isKey="true">
+          <Brush>White</Brush>
+          <ClientRectangle>4.3,1.4,0.8,0.2</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Arial,12</Font>
+          <Guid>833aed9818544466a015c9f22bf8ec51</Guid>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text7</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>احترما اینجانب</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text7>
+        <Text8 Ref="12" type="Text" isKey="true">
+          <Brush>White</Brush>
+          <ClientRectangle>3.6,1.4,0.7,0.2</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Arial,12</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text8</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{sender_fullname}</Text>
+          <TextBrush>Black</TextBrush>
+        </Text8>
+        <Text9 Ref="13" type="Text" isKey="true">
+          <Brush>White</Brush>
+          <ClientRectangle>3.1,1.4,0.5,0.2</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Arial,12</Font>
+          <Guid>b6fda4bee3f64b13aaaf63510e5fc9df</Guid>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text9</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>با شغل</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text9>
+        <Text10 Ref="14" type="Text" isKey="true">
+          <Brush>White</Brush>
+          <ClientRectangle>1.8,1.4,1.4,0.2</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Arial,12</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text10</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{jobname}</Text>
+          <TextBrush>Black</TextBrush>
+        </Text10>
+        <Text11 Ref="15" type="Text" isKey="true">
+          <Brush>White</Brush>
+          <ClientRectangle>0.2,1.4,1.5,0.2</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Arial,12</Font>
+          <Guid>33090e4c3e66425087f641b66b12e861</Guid>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text11</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>تقاضای مرخصی به صورت</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text11>
+        <Text12 Ref="16" type="Text" isKey="true">
+          <Brush>White</Brush>
+          <ClientRectangle>4.2,1.8,0.9,0.2</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Arial,12</Font>
+          <Guid>c3aebc0fb40e4b1caf609af39a63eac2</Guid>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text12</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>ساعتی از ساعت</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text12>
+        <Text13 Ref="17" type="Text" isKey="true">
+          <Brush>White</Brush>
+          <ClientRectangle>3.1,1.8,0.5,0.2</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Arial,12</Font>
+          <Guid>9fee7b8649524923bdc01c833c7affc2</Guid>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text13</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>تا ساعت</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text13>
+        <Text14 Ref="18" type="Text" isKey="true">
+          <Brush>White</Brush>
+          <ClientRectangle>3.6,1.8,0.6,0.2</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Arial,12</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text14</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{fromtime}</Text>
+          <TextBrush>Black</TextBrush>
+        </Text14>
+        <Text15 Ref="19" type="Text" isKey="true">
+          <Brush>White</Brush>
+          <ClientRectangle>2.5,1.8,0.6,0.2</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Arial,12</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text15</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{totime}</Text>
+          <TextBrush>Black</TextBrush>
+        </Text15>
+        <Text16 Ref="20" type="Text" isKey="true">
+          <Brush>White</Brush>
+          <ClientRectangle>2,1.8,0.5,0.2</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Arial,12</Font>
+          <Guid>fa18bb43094246ecaa7f066358e23837</Guid>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text16</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>در تاریخ</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text16>
+        <Text17 Ref="21" type="Text" isKey="true">
+          <Brush>White</Brush>
+          <ClientRectangle>1.1,1.8,0.8,0.2</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Arial,12</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text17</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{time_day}</Text>
+          <TextBrush>Black</TextBrush>
+        </Text17>
+        <Text18 Ref="22" type="Text" isKey="true">
+          <Brush>White</Brush>
+          <ClientRectangle>0.5,1.8,0.5,0.2</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Arial,12</Font>
+          <Guid>b5d10bc9af6648d2b9d40cb10180397a</Guid>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text18</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>.را دارم</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text18>
+        <Text19 Ref="23" type="Text" isKey="true">
+          <Brush>White</Brush>
+          <ClientRectangle>4.2,2.2,0.9,0.2</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Arial,12</Font>
+          <Guid>4b10603c5b95443e9d5dd3c183de8575</Guid>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text19</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>روزانه به مدت</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text19>
+        <Text20 Ref="24" type="Text" isKey="true">
+          <Brush>White</Brush>
+          <ClientRectangle>3.1,2.2,0.8,0.2</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Arial,12</Font>
+          <Guid>b16eaff12363485aac541e7925238038</Guid>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text20</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>روز از تاریخ</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text20>
+        <Text23 Ref="25" type="Text" isKey="true">
+          <Brush>White</Brush>
+          <ClientRectangle>1.8,2.2,0.5,0.2</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Arial,12</Font>
+          <Guid>b099edd18764475f91fb1f7708a4bca2</Guid>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text23</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>تا تاریخ</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text23>
+        <Text25 Ref="26" type="Text" isKey="true">
+          <Brush>White</Brush>
+          <ClientRectangle>0.4,2.2,0.5,0.2</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Arial,12</Font>
+          <Guid>cea8cb08bd4b4ec997b1bd5b8e49649e</Guid>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text25</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>.را دارم</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text25>
+        <Text21 Ref="27" type="Text" isKey="true">
+          <Brush>White</Brush>
+          <ClientRectangle>3.9,2.2,0.4,0.2</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Arial,12</Font>
+          <HorAlignment>Center</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text21</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{leaveday}</Text>
+          <TextBrush>Black</TextBrush>
+        </Text21>
+        <Text22 Ref="28" type="Text" isKey="true">
+          <Brush>White</Brush>
+          <ClientRectangle>2.4,2.2,0.7,0.2</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Arial,12</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text22</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{fromdate}</Text>
+          <TextBrush>Black</TextBrush>
+        </Text22>
+        <Text24 Ref="29" type="Text" isKey="true">
+          <Brush>White</Brush>
+          <ClientRectangle>1,2.2,0.7,0.2</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Arial,12</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text24</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{todate}</Text>
+          <TextBrush>Black</TextBrush>
+        </Text24>
+        <Text26 Ref="30" type="Text" isKey="true">
+          <Brush>White</Brush>
+          <ClientRectangle>4.2,3.9,1,0.2</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Arial,12</Font>
+          <Guid>ffd2303a8b1b439f884a46e2888858b0</Guid>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text26</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>: درخواست کننده</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text26>
+        <Text27 Ref="31" type="Text" isKey="true">
+          <Brush>White</Brush>
+          <ClientRectangle>2.9,3.9,1.3,0.2</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Arial,12</Font>
+          <Guid>41938ab7c481481192c8343eb618b744</Guid>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text27</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{sender_fullname}</Text>
+          <TextBrush>Black</TextBrush>
+        </Text27>
+        <Text28 Ref="32" type="Text" isKey="true">
+          <Brush>White</Brush>
+          <ClientRectangle>1.8,3.9,0.7,0.2</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Arial,12</Font>
+          <Guid>e754f7127a8b478e999ca3ef7b678b2b</Guid>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text28</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>: تایید کننده</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text28>
+        <Text29 Ref="33" type="Text" isKey="true">
+          <Brush>White</Brush>
+          <ClientRectangle>0.4,3.9,1.4,0.2</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Arial,12</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text29</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{confirm_fullname}</Text>
+          <TextBrush>Black</TextBrush>
+        </Text29>
+        <Image2 Ref="34" type="Image" isKey="true">
+          <Brush>White</Brush>
+          <ClientRectangle>3.2,2.8,1.2,1</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <ImageData>{request_signature}</ImageData>
+          <Name>Image2</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Stretch>True</Stretch>
+        </Image2>
+        <Image3 Ref="35" type="Image" isKey="true">
+          <Brush>White</Brush>
+          <ClientRectangle>0.7,2.8,1.3,1</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <ImageData>{confirm_signature}</ImageData>
+          <Name>Image3</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Stretch>True</Stretch>
+        </Image3>
+        <HorizontalLinePrimitive1 Ref="36" type="HorizontalLinePrimitive" isKey="true">
+          <ClientRectangle>0,2.7,5.2,0.01</ClientRectangle>
+          <Color>Black</Color>
+          <EndCap Ref="37" type="Cap" isKey="true">
+            <Color>Black</Color>
+          </EndCap>
+          <Name>HorizontalLinePrimitive1</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <StartCap Ref="38" type="Cap" isKey="true">
+            <Color>Black</Color>
+          </StartCap>
+        </HorizontalLinePrimitive1>
+        <VerticalLinePrimitive1 Ref="39" type="VerticalLinePrimitive" isKey="true">
+          <ClientRectangle>2.6,2.7,0.01,1.5</ClientRectangle>
+          <Color>Black</Color>
+          <EndCap Ref="40" type="Cap" isKey="true">
+            <Color>Black</Color>
+          </EndCap>
+          <Guid>57de994fc3004159a11f67ea574ddf91</Guid>
+          <Name>VerticalLinePrimitive1</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <StartCap Ref="41" type="Cap" isKey="true">
+            <Color>Black</Color>
+          </StartCap>
+        </VerticalLinePrimitive1>
+        <StartPointPrimitive1 Ref="42" type="Stimulsoft.Report.Components.StiStartPointPrimitive" isKey="true">
+          <ClientRectangle>2.6,2.7,0,0</ClientRectangle>
+          <Name>StartPointPrimitive1</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <ReferenceToGuid>57de994fc3004159a11f67ea574ddf91</ReferenceToGuid>
+        </StartPointPrimitive1>
+        <EndPointPrimitive1 Ref="43" type="Stimulsoft.Report.Components.StiEndPointPrimitive" isKey="true">
+          <ClientRectangle>2.6,4.2,0,0</ClientRectangle>
+          <Name>EndPointPrimitive1</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <ReferenceToGuid>57de994fc3004159a11f67ea574ddf91</ReferenceToGuid>
+        </EndPointPrimitive1>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>0c9ee2d127fd4ef3be8bdbef5dc6f06f</Guid>
+      <Margins>0.39,0.39,0.39,0.39</Margins>
+      <Name>Page1</Name>
+      <PageHeight>5</PageHeight>
+      <PageWidth>6</PageWidth>
+      <PaperSize>Letter</PaperSize>
+      <Report isRef="0" />
+      <Watermark Ref="44" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </Page1>
+  </Pages>
+  <PrinterSettings Ref="45" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportChanged>5/28/2021 11:19:04 AM</ReportChanged>
+  <ReportCreated>5/28/2021 9:13:22 AM</ReportCreated>
+  <ReportFile>D:\AuthomationSystem\AuthomationSystem\AuthomationSystem\wwwroot\reports\morkhasi.mrt</ReportFile>
+  <ReportGuid>a6281a407ecb46bf8bd61724d605d5fa</ReportGuid>
+  <ReportName>Report</ReportName>
+  <ReportUnit>Inches</ReportUnit>
+  <ReportVersion>2015.1.0</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        public Report()        {
+            this.InitializeComponent();
+        }
+
+        #region StiReport Designer generated code - do not modify
+        #endregion StiReport Designer generated code - do not modify
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0" />
+</StiSerializer>

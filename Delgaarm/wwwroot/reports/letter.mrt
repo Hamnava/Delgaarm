@@ -1,0 +1,421 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="0" />
+    <DataSources isList="true" count="0" />
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Variables isList="true" count="9">
+      <value>,letterdate,letterdate,System.String,,False,False</value>
+      <value>,forieat,forieat,System.String,,False,False</value>
+      <value>,tabaqa,tabaqa,System.String,,False,False</value>
+      <value>,attachment,attachment,System.String,,False,False</value>
+      <value>,fromuser,fromuser,System.String,,False,False</value>
+      <value>,touser,touser,System.String,,False,False</value>
+      <value>,lettersubject,lettersubject,System.String,,False,False</value>
+      <value>,lettercontent,lettercontent,System.String,,False,False</value>
+      <value>,signature,signature,System.Drawing.Image,,False,False</value>
+    </Variables>
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="2" type="Page" isKey="true">
+      <Border>All;Black;2;Solid;False;4;Black</Border>
+      <Brush>White</Brush>
+      <Components isList="true" count="3">
+        <PageHeaderBand1 Ref="3" type="PageHeaderBand" isKey="true">
+          <Border>None;[238:236:225];1;Solid;False;4;Black</Border>
+          <Brush>[219:229:241]</Brush>
+          <ClientRectangle>0,0.2,7.72,1.5</ClientRectangle>
+          <Components isList="true" count="11">
+            <Text1 Ref="4" type="Text" isKey="true">
+              <Brush>[219:229:241]</Brush>
+              <ClientRectangle>3.4,0.1,1.4,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,16</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text1</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>به نام خداوند یکتا</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text1>
+            <Text2 Ref="5" type="Text" isKey="true">
+              <Brush>[219:229:241]</Brush>
+              <ClientRectangle>0.1,0.3,1.1,0.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,13</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text2</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>{letterdate}</Text>
+              <TextBrush>Black</TextBrush>
+            </Text2>
+            <Text3 Ref="6" type="Text" isKey="true">
+              <Brush>[219:229:241]</Brush>
+              <ClientRectangle>1.2,0.3,1.5,0.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,13</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text3</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>: تاریخ</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text3>
+            <Text4 Ref="7" type="Text" isKey="true">
+              <Brush>[219:229:241]</Brush>
+              <ClientRectangle>0.2,0.6,1,0.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,13</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text4</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>{forieat}</Text>
+              <TextBrush>Black</TextBrush>
+            </Text4>
+            <Text5 Ref="8" type="Text" isKey="true">
+              <Brush>[219:229:241]</Brush>
+              <ClientRectangle>1.2,0.6,0.7,0.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,13</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text5</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>: فوریت</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text5>
+            <Text6 Ref="9" type="Text" isKey="true">
+              <Brush>[219:229:241]</Brush>
+              <ClientRectangle>0.1,0.9,1.1,0.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,13</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text6</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>{tabaqa}</Text>
+              <TextBrush>Black</TextBrush>
+            </Text6>
+            <Text7 Ref="10" type="Text" isKey="true">
+              <Brush>[219:229:241]</Brush>
+              <ClientRectangle>1.2,0.9,0.9,0.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,13</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text7</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>: طبقه بندی</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text7>
+            <Text8 Ref="11" type="Text" isKey="true">
+              <Brush>[219:229:241]</Brush>
+              <ClientRectangle>0.1,1.2,1.1,0.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,13</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text8</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>{attachment}</Text>
+              <TextBrush>Black</TextBrush>
+            </Text8>
+            <Text9 Ref="12" type="Text" isKey="true">
+              <Brush>[219:229:241]</Brush>
+              <ClientRectangle>1.2,1.2,0.6,0.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,13</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text9</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>: پیوست</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text9>
+            <Text10 Ref="13" type="Text" isKey="true">
+              <Brush>[219:229:241]</Brush>
+              <ClientRectangle>4.9,1.1,2.5,0.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,13</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text10</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>شرکت خدماتی و تکنالوژی انارسافت</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text10>
+            <Image1 Ref="14" type="Image" isKey="true">
+              <Brush>[219:229:241]</Brush>
+              <ClientRectangle>5.7,0.2,0.9,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <File>C:\Users\Hamnava\Desktop\logo.png</File>
+              <Name>Image1</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Stretch>True</Stretch>
+            </Image1>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>PageHeaderBand1</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+        </PageHeaderBand1>
+        <PageFooterBand1 Ref="15" type="PageFooterBand" isKey="true">
+          <Brush>[219:229:241]</Brush>
+          <ClientRectangle>0,13.71,7.72,0.6</ClientRectangle>
+          <Components isList="true" count="4">
+            <Text11 Ref="16" type="Text" isKey="true">
+              <Brush>[219:229:241]</Brush>
+              <ClientRectangle>1.2,0.08,5.4,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,12</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text11</Name>
+              <Page isRef="2" />
+              <Parent isRef="15" />
+              <Text>آدرس: کابل، دشت برچی، سرک شهید مزاری (ره)، ایستگاه نانوایی، برچی سیتی واک، منزل ششم</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text11>
+            <Text12 Ref="17" type="Text" isKey="true">
+              <Brush>[219:229:241]</Brush>
+              <ClientRectangle>2.9,0.38,1.9,0.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,12</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text12</Name>
+              <Page isRef="2" />
+              <Parent isRef="15" />
+              <Text>تماس: 0772297557</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text12>
+            <Text14 Ref="18" type="Text" isKey="true">
+              <Brush>[219:229:241]</Brush>
+              <ClientRectangle>0.4,0.28,0.5,0.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,12</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text14</Name>
+              <Page isRef="2" />
+              <Parent isRef="15" />
+              <Text>: صفحه</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text14>
+            <Text13 Ref="19" type="Text" isKey="true">
+              <Brush>[219:229:241]</Brush>
+              <ClientRectangle>0,0.28,0.4,0.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,12</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text13</Name>
+              <Page isRef="2" />
+              <Parent isRef="15" />
+              <Text>{PageNumber}</Text>
+              <TextBrush>Black</TextBrush>
+            </Text13>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>PageFooterBand1</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+        </PageFooterBand1>
+        <DataBand1 Ref="20" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,2.1,7.72,7.3</ClientRectangle>
+          <Components isList="true" count="8">
+            <Text15 Ref="21" type="Text" isKey="true">
+              <Brush>White</Brush>
+              <ClientRectangle>3,0.2,2.8,0.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,14</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text15</Name>
+              <Page isRef="2" />
+              <Parent isRef="20" />
+              <Text>{fromuser}</Text>
+              <TextBrush>Black</TextBrush>
+            </Text15>
+            <Text16 Ref="22" type="Text" isKey="true">
+              <Brush>White</Brush>
+              <ClientRectangle>5.8,0.2,0.4,0.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,14</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text16</Name>
+              <Page isRef="2" />
+              <Parent isRef="20" />
+              <Text>: از</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text16>
+            <Text17 Ref="23" type="Text" isKey="true">
+              <Brush>White</Brush>
+              <ClientRectangle>3,0.5,2.8,0.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,14</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text17</Name>
+              <Page isRef="2" />
+              <Parent isRef="20" />
+              <Text>{touser}</Text>
+              <TextBrush>Black</TextBrush>
+            </Text17>
+            <Text18 Ref="24" type="Text" isKey="true">
+              <Brush>White</Brush>
+              <ClientRectangle>5.8,0.5,0.4,0.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,14</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text18</Name>
+              <Page isRef="2" />
+              <Parent isRef="20" />
+              <Text>: به</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text18>
+            <Text19 Ref="25" type="Text" isKey="true">
+              <Brush>White</Brush>
+              <ClientRectangle>3,0.8,2.8,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,14</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text19</Name>
+              <Page isRef="2" />
+              <Parent isRef="20" />
+              <Text>{lettersubject}</Text>
+              <TextBrush>Black</TextBrush>
+            </Text19>
+            <Text20 Ref="26" type="Text" isKey="true">
+              <Brush>White</Brush>
+              <ClientRectangle>5.8,0.8,0.7,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,14</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text20</Name>
+              <Page isRef="2" />
+              <Parent isRef="20" />
+              <Text>: موضوع</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text20>
+            <Text21 Ref="27" type="Text" isKey="true">
+              <AllowHtmlTags>True</AllowHtmlTags>
+              <Brush>White</Brush>
+              <ClientRectangle>0.7,1.2,6.4,5.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,14</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text21</Name>
+              <Page isRef="2" />
+              <Parent isRef="20" />
+              <Text>{lettercontent}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+            </Text21>
+            <Image2 Ref="28" type="Image" isKey="true">
+              <Brush>White</Brush>
+              <ClientRectangle>0.7,6.2,1.3,1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <ImageData>{signature}</ImageData>
+              <Name>Image2</Name>
+              <Page isRef="2" />
+              <Parent isRef="20" />
+              <Stretch>True</Stretch>
+            </Image2>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Filters isList="true" count="0" />
+          <Name>DataBand1</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Sort isList="true" count="0" />
+        </DataBand1>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>e847d09e076246598ee5d180e7e4db63</Guid>
+      <Margins>0.39,0.39,0.39,0.39</Margins>
+      <Name>Page1</Name>
+      <PageHeight>11</PageHeight>
+      <PageWidth>8.5</PageWidth>
+      <PaperSize>Letter</PaperSize>
+      <Report isRef="0" />
+      <Watermark Ref="29" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </Page1>
+  </Pages>
+  <PrinterSettings Ref="30" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportChanged>5/27/2021 3:18:23 PM</ReportChanged>
+  <ReportCreated>5/27/2021 1:16:59 PM</ReportCreated>
+  <ReportFile>D:\AuthomationSystem\AuthomationSystem\AuthomationSystem\wwwroot\reports\letter.mrt</ReportFile>
+  <ReportGuid>21dabdb235cb4c31acd06ca80f6e333e</ReportGuid>
+  <ReportName>Report</ReportName>
+  <ReportUnit>Inches</ReportUnit>
+  <ReportVersion>2015.1.0</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        public Report()        {
+            this.InitializeComponent();
+        }
+
+        #region StiReport Designer generated code - do not modify
+		#endregion StiReport Designer generated code - do not modify
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0" />
+</StiSerializer>

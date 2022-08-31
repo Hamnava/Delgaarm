@@ -1,0 +1,69 @@
+﻿
+@font-face {
+    font-family: 'IRANSansWeb';
+    src: url('/fonts/IRANSansWeb.eot');
+    src: url('/fonts/IRANSansWeb.eot') format('embedded-opentype'), url('/fonts/IRANSansWeb.woff') format('woff'), url('/fonts/IRANSansWeb.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    font-family:'IRANSansWeb' !important
+}
+
+.btn-green{
+    border:1px solid gray;
+    border-radius: 3px;
+    color:black;
+    background-color:green;
+}
+.mytable2{
+    border-radius:2px; 
+    box-shadow: 3px 3px 1px 0 gray;
+}
+.custominput{
+    margin-bottom:15px !important;
+}
+.Twhite{
+    color:white !important;
+}
+.customblue {
+    border: 1px solid gray;
+    border-radius: 3px;
+    color: black;
+    background-color: #6ee1be;
+}
+
+/************For Jobs Chart*************/
+.jobsalert{
+    border-radius:3px 3px 1px 0px gray;
+    border:1px solid gray;
+    text-align:center;
+    font-weight:bold;
+    margin-top:15px;
+}
+.mychart{
+    border:1px;
+    height:430px;
+    box-shadow:3px 1px 1px 0 gray;
+    border-radius:2px;
+}
+/*************End Jobs Chart*************/
+.customred {
+    border: 1px solid gray;
+    border-radius: 3px;
+    color: black;
+    background-color: #e17c6e;
+}
+.customyellow {
+    border: 1px solid gray;
+    border-radius: 3px;
+    color: black;
+    background-color: #dce16e;
+}
+.customgreen {
+    border: 1px solid gray;
+    border-radius: 3px;
+    color: black;
+    background-color: #77f272;
+}

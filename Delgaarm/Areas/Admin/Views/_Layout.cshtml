@@ -1,0 +1,321 @@
+﻿
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="fontiran.com:license" content="Y68A9">
+
+    <title>  ادمین پنل    </title>
+
+    <!-- Bootstrap -->
+    <link href="~/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/css/bootstrap-rtl.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="~/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- NProgress -->
+    <!-- Custom Theme Style -->
+    <link href="~/css/custom.min.css" rel="stylesheet">
+    <link href="~/css/customstyle.css" rel="stylesheet" />
+
+    <!----تقویم هجری شمسی-->
+    <link href="~/lib/MdPersiandatetimepicker/css/jquery.Bootstrap-PersianDateTimePicker.css" rel="stylesheet" />
+    <!--JS Tree Css-->
+    <link href="~/lib/jstree/dist/themes/default/style.css" rel="stylesheet" />
+</head>
+<!-- /header content -->
+<body class="nav-md">
+    <div class="container body">
+        <div class="main_container">
+            <div class="col-md-3 left_col hidden-print">
+                <div class="left_col scroll-view">
+                    <div class="navbar nav_title" style="border: 0;">
+                        <a href="index.html" class="site_title"><i class="fa fa-user-secret"></i> <span> ادمین پنل</span></a>
+                    </div>
+
+                    <div class="clearfix"></div>
+
+                    <!-- menu profile quick info -->
+                   @await Component.InvokeAsync("AdminInfoInDashborad", Model);
+                    <!-- /menu profile quick info -->
+
+                    <br />
+
+                    <!-- sidebar menu -->
+                    <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                        <div class="menu_section">
+
+                            <ul class="nav side-menu">
+                                <li>
+                                    <a asp-controller="Dashboard" asp-action="Index"><i class="fa fa-dashboard"></i> پیشخوان  <span class="fa fa-chevron-down"></span></a>
+                                </li>
+                                <li>
+                                    <a asp-controller="UserManager" asp-action="Index"><i class="fa fa-user"></i> مدیریت کاربران <span class="fa fa-chevron-down"></span></a>
+
+                                </li>
+                                <li>
+                                    <a asp-controller="AdminstrativeForm" asp-action="Index"><i class="fa fa-envelope-o"></i> فرم های اداری  <span class="fa fa-chevron-down"></span></a>
+
+                                </li>
+                                <li>
+                                    <a asp-controller="NewsList" asp-action="Index"><i class="fa fa-envelope-o"></i>  اخبار و اطلاعیه ها   <span class="fa fa-chevron-down"></span></a>
+
+                                </li>
+                                <li>
+                                    <a asp-controller="JobsChart" asp-action="Index"><i class="fa fa-user-circle-o"></i> مشاغل <span class="fa fa-chevron-down"></span></a>
+                                </li>
+                                <li>
+                                    <a asp-controller="UserJobManager" asp-action="Index">
+                                        <i class="fa fa-desktop"></i> انتساب شغل <span class="fa fa-chevron-down"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a asp-controller="Reminder" asp-action="Index"><i class="fa fa-table"></i> یاد آوری <span class="fa fa-chevron-down"></span></a>
+                                </li>
+                                <li>
+                                    <a asp-controller="SystemPart" asp-action="Index"><i class="fa fa-universal-access"></i> اجزای سیستم  <span class="fa fa-chevron-down"></span></a>
+                                </li>
+                                <li>
+                                    <a asp-controller="AccessRight" asp-action="Index"><i class="fa fa-wheelchair"></i> کنترول دسترسی ها   <span class="fa fa-chevron-down"></span></a>
+                                </li>
+                                <li>
+                                    <a asp-controller="RolePattern" asp-action="Index"><i class="fa fa-blind"></i> نقش های کاربری   <span class="fa fa-chevron-down"></span></a>
+                                </li>
+                                @*<li>
+            <a><i class="fa fa-bar-chart-o"></i> ارائه داده <span class="fa fa-chevron-down"></span></a>
+            <ul class="nav child_menu">
+
+                <li><a href="other_charts.html">چارت  </a></li>
+            </ul>
+        </li>*@
+
+                            </ul>
+                        </div>
+                        <div class="menu_section">
+                            <h3>به صورت زنده</h3>
+                            <ul class="nav side-menu">
+                                <li>
+                                    <a><i class="fa fa-bug"></i> صفحات اضافی <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+
+                                        <li><a href="projects.html">پروژه ها</a></li>
+                                        <li><a href="project_detail.html">جزئیات پروژه</a></li>
+                                        <li><a href="contacts.html">اطلاعات تماس</a></li>
+
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a>
+                                        <i class="fa fa-windows"></i> افزودنیهای پیشنهاد شده <span class="fa fa-chevron-down"></span>
+                                    </a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="page_403.html">403 ارور</a></li>
+                                        <li><a href="page_404.html">404 ارور</a></li>
+                                        <li><a href="page_500.html">500 ارور</a></li>
+                                        <li><a href="plain_page.html">صفحه ساده</a></li>
+                                        <li><a href="login.html">صفحه ورود</a></li>
+
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a>
+                                        <i class="fa fa-sitemap"></i> منو چند سطحی <span class="fa fa-chevron-down"></span>
+                                    </a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="#level1_1">سطح یک</a>
+                                        <li>
+                                            <a>سطح یک<span class="fa fa-chevron-down"></span></a>
+                                            <ul class="nav child_menu">
+                                                <li class="sub_menu">
+                                                    <a href="level2.html">سطح دو</a>
+                                                </li>
+
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)">
+                                                <i class="fa fa-laptop"></i> صفحه مقصد <span class="label label-success pull-left">به زودی</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                        </div>
+
+                    </div>
+                    <!-- /sidebar menu -->
+                    <!-- /menu footer buttons -->
+                    <div class="sidebar-footer hidden-small">
+                        <a data-toggle="tooltip" data-placement="top" title="تنظیمات">
+                            <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                        </a>
+                        <a data-toggle="tooltip" data-placement="top" title="تمام صفحه" onclick="toggleFullScreen();">
+                            <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+                        </a>
+                        <a data-toggle="tooltip" data-placement="top" title="قفل" class="lock_btn">
+                            <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+                        </a>
+                        <a data-toggle="tooltip" data-placement="top" title="خروج" href="login.html">
+                            <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+                        </a>
+                    </div>
+                    <!-- /menu footer buttons -->
+                </div>
+            </div>
+
+            <!-- top navigation -->
+            <div class="top_nav hidden-print">
+                <div class="nav_menu">
+                    <nav>
+                        <div class="nav toggle">
+                            <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                        </div>
+
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="">
+                                <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown"
+                                   aria-expanded="false">
+                                    @await Component.InvokeAsync("AdminInfo", Model)
+                                    <span class=" fa fa-angle-down"></span>
+                                </a>
+                                    <ul class="dropdown-menu dropdown-usermenu pull-right">
+                                        <li><a href="javascript:;"> نمایه</a></li>
+                                        <li>
+                                            <a href="javascript:;">
+                                                <span class="badge bg-red pull-right">50%</span>
+                                                <span>تنظیمات</span>
+                                            </a>
+                                        </li>
+                                        <li><a href="javascript:;">کمک</a></li>
+                                        <form asp-controller="Account" asp-action="LogOut" method="post" asp-area="">
+                                            <li><button type="submit" style="border:none; background-color:white;"><i class="fa fa-sign-out pull-right"></i> خروج</button></li>
+                                        </form>
+                                    </ul>
+                            </li>
+
+                            <li role="presentation" class="dropdown">
+                                <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown"
+                                   aria-expanded="false">
+                                    <i class="fa fa-envelope-o"></i>
+                                    <span class="badge bg-green">6</span>
+                                </a>
+                                <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
+                                    <li>
+                                        <a>
+                                            <span class="image">
+                                                <img src="~/img/img.jpg"
+                                                     alt="Profile Image" />
+                                            </span>
+                                            <span>
+                                                <span>نعمت الله حسینی </span>
+                                                <span class="time">3 دقیقه پیش</span>
+                                            </span>
+                                            <span class="message">
+                                                فیلمای فستیوال فیلمایی که اجرا شده یا راجع به لحظات مرده ایه که فیلمسازا میسازن. آنها جایی بودند که....
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a>
+                                            <span class="image">
+                                                <img src="~/img/img.jpg"
+                                                     alt="Profile Image" />
+                                            </span>
+                                            <span>
+                                                <span>نعمت الله حسینی </span>
+                                                <span class="time">3 دقیقه پیش</span>
+                                            </span>
+                                            <span class="message">
+                                                فیلمای فستیوال فیلمایی که اجرا شده یا راجع به لحظات مرده ایه که فیلمسازا میسازن. آنها جایی بودند که....
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a>
+                                            <span class="image">
+                                                <img src="~/img/img.jpg"
+                                                     alt="Profile Image" />
+                                            </span>
+                                            <span>
+                                                <span>نعمت الله حسینی </span>
+                                                <span class="time">3 دقیقه پیش</span>
+                                            </span>
+                                            <span class="message">
+                                                فیلمای فستیوال فیلمایی که اجرا شده یا راجع به لحظات مرده ایه که فیلمسازا میسازن. آنها جایی بودند که....
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a>
+                                            <span class="image">
+                                                <img src="~/img/img.jpg"
+                                                     alt="Profile Image" />
+                                            </span>
+                                            <span>
+                                                <span>نعمت الله حسینی </span>
+                                                <span class="time">3 دقیقه پیش</span>
+                                            </span>
+                                            <span class="message">
+                                                فیلمای فستیوال فیلمایی که اجرا شده یا راجع به لحظات مرده ایه که فیلمسازا میسازن. آنها جایی بودند که....
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <div class="text-center">
+                                            <a>
+                                                <strong>مشاهده تمام اعلان ها</strong>
+                                                <i class="fa fa-angle-right"></i>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <!-- /top navigation -->
+            <!-- /header content -->
+            <div class="clearfix"></div>
+            <div>
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+    <div id="lock_screen">
+        <table>
+            <tr>
+                <td>
+                    <div class="clock"></div>
+                    <span class="unlock">
+                        <span class="fa-stack fa-5x">
+                            <i class="fa fa-square-o fa-stack-2x fa-inverse"></i>
+                            <i id="icon_lock" class="fa fa-lock fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </span>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+    <!-- jQuery -->
+    <script src="~/js/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="~/js/bootstrap.min.js"></script>
+    <!-- Custom Theme Scripts -->
+    <script src="~/js/custom.min.js"></script>
+
+    <!---تقویم هجری شمسی-->
+    <script src="~/lib/MdPersiandatetimepicker/js/calendar.js"></script>
+    <script src="~/lib/MdPersiandatetimepicker/js/jquery.Bootstrap-PersianDateTimePicker.js"></script>
+
+    <!--Js Tree Jquery-->
+
+    <script src="~/lib/jstree/dist/jstree.js"></script>
+    @RenderSection("AdminScript", required: false);
+
+</body>
+</html>
