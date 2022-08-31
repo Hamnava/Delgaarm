@@ -25,6 +25,8 @@ namespace Infrastracture.Context
         public DbSet<EmailRegister> emailRegisters { get; set; }
         public DbSet<Order> orders { get; set; }
         public DbSet<Slider> sliders { get; set; }
+        public DbSet<YourDesign> YourDesigns { get; set; }
+        public DbSet<TailorSize> TailorSizes { get; set; }
 
 
     }
