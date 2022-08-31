@@ -59,98 +59,51 @@
 
                             <ul class="nav side-menu">
                                 <li>
-                                    <a asp-controller="Dashboard" asp-action="Index"><i class="fa fa-dashboard"></i> پیشخوان  <span class="fa fa-chevron-down"></span></a>
+                                    <a asp-controller="Dashboard" asp-action="Index"><i class="fa fa-dashboard"></i> دشبورد  <span class="fa fa-chevron-down"></span></a>
                                 </li>
                                 <li>
                                     <a asp-controller="UserManager" asp-action="Index"><i class="fa fa-user"></i> مدیریت کاربران <span class="fa fa-chevron-down"></span></a>
 
                                 </li>
                                 <li>
-                                    <a asp-controller="AdminstrativeForm" asp-action="Index"><i class="fa fa-envelope-o"></i> فرم های اداری  <span class="fa fa-chevron-down"></span></a>
+                                    <a asp-controller="Category" asp-action="Index"><i class="fa fa-part"></i>کتگوری ها  <span class="fa fa-chevron-down"></span></a>
 
                                 </li>
                                 <li>
-                                    <a asp-controller="NewsList" asp-action="Index"><i class="fa fa-envelope-o"></i>  اخبار و اطلاعیه ها   <span class="fa fa-chevron-down"></span></a>
+                                    <a asp-controller="NewsList" asp-action="Index"><i class="fa fa-color"></i>   رنگ محصول   <span class="fa fa-chevron-down"></span></a>
 
                                 </li>
                                 <li>
-                                    <a asp-controller="JobsChart" asp-action="Index"><i class="fa fa-user-circle-o"></i> مشاغل <span class="fa fa-chevron-down"></span></a>
+                                    <a asp-controller="JobsChart" asp-action="Index"><i class="fa fa-product"></i> محصولات <span class="fa fa-chevron-down"></span></a>
                                 </li>
-                                <li>
-                                    <a asp-controller="UserJobManager" asp-action="Index">
-                                        <i class="fa fa-desktop"></i> انتساب شغل <span class="fa fa-chevron-down"></span>
-                                    </a>
+                                 <li>
+                                    <a asp-controller="JobsChart" asp-action="Index"><i class="fa fa-gallery"></i> گالری محصولات <span class="fa fa-chevron-down"></span></a>
                                 </li>
-                                <li>
-                                    <a asp-controller="Reminder" asp-action="Index"><i class="fa fa-table"></i> یاد آوری <span class="fa fa-chevron-down"></span></a>
+                                 <li>
+                                    <a asp-controller="JobsChart" asp-action="Index"><i class="fa fa-order"></i> سفارشات <span class="fa fa-chevron-down"></span></a>
                                 </li>
-                                <li>
-                                    <a asp-controller="SystemPart" asp-action="Index"><i class="fa fa-universal-access"></i> اجزای سیستم  <span class="fa fa-chevron-down"></span></a>
+                                 <li>
+                                    <a asp-controller="JobsChart" asp-action="Index"><i class="fa fa-envelope-o"></i> پیام مشتریان <span class="fa fa-chevron-down"></span></a>
                                 </li>
-                                <li>
-                                    <a asp-controller="AccessRight" asp-action="Index"><i class="fa fa-wheelchair"></i> کنترول دسترسی ها   <span class="fa fa-chevron-down"></span></a>
+                                 <li>
+                                    <a asp-controller="JobsChart" asp-action="Index"><i class="fa fa-user-circle-o"></i> ایمیل ها <span class="fa fa-chevron-down"></span></a>
                                 </li>
-                                <li>
-                                    <a asp-controller="RolePattern" asp-action="Index"><i class="fa fa-blind"></i> نقش های کاربری   <span class="fa fa-chevron-down"></span></a>
+                                 <li>
+                                    <a asp-controller="JobsChart" asp-action="Index"><i class="fa fa-user-circle-o"></i>  طرح مشتریان <span class="fa fa-chevron-down"></span></a>
                                 </li>
-                                @*<li>
-                                <a><i class="fa fa-bar-chart-o"></i> ارائه داده <span class="fa fa-chevron-down"></span></a>
-                                <ul class="nav child_menu">
-
-                                <li><a href="other_charts.html">چارت  </a></li>
-                                </ul>
-                                </li>*@
-
+                                 <li>
+                                    <a asp-controller="JobsChart" asp-action="Index"><i class="fa fa-user-circle-o"></i>   سایز مشتریان <span class="fa fa-chevron-down"></span></a>
+                                </li>
+                                 <li>
+                                    <a asp-controller="JobsChart" asp-action="Index"><i class="fa fa-user-circle-o"></i>    سرویس ها <span class="fa fa-chevron-down"></span></a>
+                                </li>
+                                  <li>
+                                    <a asp-controller="JobsChart" asp-action="Index"><i class="fa fa-user-circle-o"></i>     سلایدر <span class="fa fa-chevron-down"></span></a>
+                                </li>
+                              
                             </ul>
                         </div>
-                        <div class="menu_section">
-                            <h3>به صورت زنده</h3>
-                            <ul class="nav side-menu">
-                                <li>
-                                    <a><i class="fa fa-bug"></i> صفحات اضافی <span class="fa fa-chevron-down"></span></a>
-                                    <ul class="nav child_menu">
-
-                                        <li><a href="projects.html">پروژه ها</a></li>
-                                        <li><a href="project_detail.html">جزئیات پروژه</a></li>
-                                        <li><a href="contacts.html">اطلاعات تماس</a></li>
-
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a>
-                                        <i class="fa fa-windows"></i> افزودنیهای پیشنهاد شده <span class="fa fa-chevron-down"></span>
-                                    </a>
-                                    <ul class="nav child_menu">
-                                        <li><a href="page_403.html">403 ارور</a></li>
-                                        <li><a href="page_404.html">404 ارور</a></li>
-                                        <li><a href="page_500.html">500 ارور</a></li>
-                                        <li><a href="plain_page.html">صفحه ساده</a></li>
-                                        <li><a href="login.html">صفحه ورود</a></li>
-
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a>
-                                        <i class="fa fa-sitemap"></i> منو چند سطحی <span class="fa fa-chevron-down"></span>
-                                    </a>
-                                    <ul class="nav child_menu">
-                                        <li><a href="#level1_1">سطح یک</a>
-                                        <li>
-                                            <a>سطح یک<span class="fa fa-chevron-down"></span></a>
-                                            <ul class="nav child_menu">
-                                                <li class="sub_menu">
-                                                    <a href="level2.html">سطح دو</a>
-                                                </li>
-
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void(0)">
-                                                <i class="fa fa-laptop"></i> صفحه مقصد <span class="label label-success pull-left">به زودی</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                        </div>
+                    
 
                     </div>
                     <!-- /sidebar menu -->
@@ -323,6 +276,7 @@
     <!--Js Tree Jquery-->
 
     <script src="~/lib/jstree/dist/jstree.js"></script>
+     @await Component.InvokeAsync("Notyf") 
     @RenderSection("AdminScript", required: false);
 
 </body>

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Application.ViewModels
 {
-    public class ProductColorViewModel
+    public class EditColorViewModel
     {
-        
+        public int Id { get; set; }
 
         public string ColorName { get; set; }
 

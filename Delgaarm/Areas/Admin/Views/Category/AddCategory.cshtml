@@ -1,0 +1,98 @@
+﻿@model CategoryViewModel
+
+@{
+    ViewData["Title"] = "Add Category";
+}
+
+<div class="right_col" role="main">
+
+
+    <div class="panel panel-heading" style="box-shadow:3px 1px 1px 0 gray; border-radius:2px;">
+        <span style="font-weight:bold;">
+            <i class="glyphicon glyphicon-plus"></i>
+            فرم ایجاد کتگوری جدید
+        </span>
+    </div>
+
+    <div class="panel panel-body container-fluid" style="border-radius:2px; box-shadow:3px 1px 1px 0 gray; background-color:#e6e2e2;">
+        <form asp-controller="Category" asp-action="AddCategory" method="post" enctype="multipart/form-data">
+
+            <div class="col-md-6 col-xs-12">
+
+
+                <!--CategoryName-->
+                <div>
+                    <label asp-for="CategoryName" class="control-label col-md-3 col-xs-12"></label>
+                    <div class="col-md-9 col-xs-12">
+                        <input asp-for="CategoryName" type="text" class="form-control custominput" placeholder="نام  ..." autocomplete="off" />
+                        <span asp-validation-for="CategoryName" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <!--Alt-->
+                <div>
+                    <label asp-for="Alt" class="control-label col-md-3 col-xs-12"></label>
+                    <div class="col-md-9 col-xs-12">
+                        <input asp-for="Alt" type="text" class="form-control custominput" placeholder="Alt ..." autocomplete="off" />
+                        <span asp-validation-for="Alt" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <!--title-->
+                <div>
+                    <label asp-for="Title" class="control-label col-md-3 col-xs-12"></label>
+                    <div class="col-md-9 col-xs-12">
+                        <input asp-for="Title" type="text" class="form-control custominput" placeholder="  Title ..." autocomplete="off" />
+                        <span asp-validation-for="Title" class="text-danger"></span>
+                    </div>
+                </div>
+
+
+
+              
+
+                <!--IsDelete-->
+                <div>
+                    <label asp-for="IsDelete" class="control-label col-md-3 col-xs-12" style="margin-top:10px;"></label>
+                    <div class="col-md-9 col-xs-12" style="margin-top:10px;">
+                        <label class="col-md-3 col-xs-6">
+                            <input asp-for="IsDelete" type="radio" name="IsDelete" value="true"  />
+                            حذف شود
+                        </label>
+                        <label class="col-md-3 col-xs-6">
+                            <input asp-for="IsDelete" type="radio" name="IsDelete" value="false" checked/>
+                            حذف نشود
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-6 col-xs-12">
+
+               
+
+                <!--Profile-->
+                <div>
+                    <label  class="control-label col-md-3 col-xs-12">عکس کتگوری</label>
+                    <div class="col-md-9 col-xs-12">
+                        <input asp-for="CategoryPhoto" name="file" type="file" class="form-control custominput" placeholder="پروفایل ..." autocomplete="off" />
+
+                        <span asp-validation-for="CategoryPhoto" class="text-danger"></span>
+                    </div>
+                </div>
+
+
+
+                <div class="col-xs-12 form-group" style="margin-top:15px;">
+                    <input type="submit" style="border:1px solid gray; border-radius:3px;"
+                           value="ثبت کتگوری جدید" class="btn pull-right" />
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+
+</div>
+

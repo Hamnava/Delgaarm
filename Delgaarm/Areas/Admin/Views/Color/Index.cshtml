@@ -1,0 +1,130 @@
+﻿
+@model IEnumerable<ProductColor>
+    @{
+    ViewData["Title"] = "Index";
+   
+    int counter = 1;
+    }
+    <style>
+        .customblue {
+            border: 1px solid gray;
+            border-radius: 3px;
+            color: black;
+            background-color: #6ee1be;
+        }
+
+        .customyellow {
+            border: 1px solid gray;
+            border-radius: 3px;
+            color: black;
+            background-color: #dce16e;
+        }
+
+        .customred {
+            border: 1px solid gray;
+            border-radius: 3px;
+            color: black;
+            background-color: #e17c6e;
+        }
+
+        .customgreen {
+            border: 1px solid gray;
+            border-radius: 3px;
+            color: black;
+            background-color: #77f272;
+        }
+    </style>
+
+    <div class="right_col" role="main">
+
+        <div class="panel panel-heading" style="box-shadow:3px 1px 1px 0 gray; border-radius:2px;">
+            <span style="font-weight:bold;">
+                <i class="glyphicon glyphicon-user"></i>
+                لیست رنگ 
+            </span>
+        </div>
+
+        <div style="margin-bottom:5px;">
+            <a class="btn btn-primary" asp-controller="Color" asp-action="AddColor">
+                <i class="glyphicon glyphicon-plus"></i>
+                افزودن رنگ جدید
+            </a>
+        </div>
+
+        <div>
+            @*<div class="table-responsive">*@
+            <table class="table table-bordered table-striped table-hover" style="border-radius:2px; box-shadow:3px 3px 1px 0 gray;">
+                <thead>
+                    <tr>
+                        <td>ردیف</td>
+                        <td>نام</td>
+                        <td>کود</td>
+                        <td>رنگ</td>
+                        <td>حالت</td>
+                        <td>عملیات</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                {
+                    <tr style="font-size:13px;">
+                        <td style="width:60px; text-align:center;">@counter</td>
+                        <td style="text-align:right;">@item.ColorName</td>
+                        <td style="text-align:right;">@item.ColorCode</td>
+                        <td style="text-align:right;"><div style="width:30px; height:30px; background-color:@item.ColorCode"></div></td>
+                        @if (!item.IsDelete)
+                        {
+                        <td style="width:35px; color:black;">
+                            <span class="badge badge-success" style="width:50px; border-radius:15px; background-color:#1d6d0b">
+                                فعال
+                            </span>
+                        </td>
+                        }
+                        else
+                        {
+                        <td style="width:35px; color:black;">
+                            <span class="badge badge-danger" style="width:50px; border-radius:15px; background-color:darkred">
+                                غیرفعال
+                            </span>
+                        </td>
+                        }
+                       
+                      
+
+
+                        <td>
+
+                            <div class="row">
+                                <a asp-controller="Color" asp-action="Details" asp-route-id="@item.Id"
+                                   style="height:30px; width:40px; font-size:10px; margin-bottom:3px;"
+                                   class="btn btn-info" title="جزییات">
+                                    <i class="glyphicon glyphicon-book"></i>
+
+                                </a>
+
+                                <a asp-controller="Color" asp-action="EditColor" asp-route-id="@item.Id"
+                                   style="height:30px; width:40px; font-size:10px; margin-bottom:3px;"
+                                   class="btn btn-warning" title="ویرایش">
+                                    <i class="glyphicon glyphicon-edit"></i>
+
+                                </a>
+
+                            </div>
+
+                        </td>
+                    </tr>
+                    counter++;
+                }
+
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+
+    @Html.Partial("_Modal", new BootstrapModel { ID = "modal-action", Size = BootstrapModel.ModalSize.Large })
+
+    @section AdminScript{
+        <script src="~/js/modal/modal.js"></script>
+    }

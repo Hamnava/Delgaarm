@@ -24,6 +24,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="wwwroot\img\Category\" />
+    <Folder Include="wwwroot\img\Gallery\" />
+    <Folder Include="wwwroot\img\Service\" />
+    <Folder Include="wwwroot\img\YourDesign\" />
+    <Folder Include="wwwroot\img\Slider\" />
+    <Folder Include="wwwroot\img\Product\" />
     <Folder Include="wwwroot\img\Profile\" />
   </ItemGroup>
 

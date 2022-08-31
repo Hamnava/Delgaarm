@@ -1,0 +1,77 @@
+﻿@model EditColorViewModel
+
+@{
+    ViewData["Title"] = "Edit Color";
+}
+
+<div class="right_col" role="main">
+
+
+    <div class="panel panel-heading" style="box-shadow:3px 1px 1px 0 gray; border-radius:2px;">
+        <span style="font-weight:bold;">
+            <i class="glyphicon glyphicon-plus"></i>
+            فرم ویرایش رنگ 
+        </span>
+    </div>
+
+    <div class="panel panel-body container-fluid" style="border-radius:2px; box-shadow:3px 1px 1px 0 gray; background-color:#e6e2e2;">
+        <form asp-controller="Color" asp-action="EditColor" method="post">
+
+            <div class="col-md-6 col-xs-12">
+
+                <input  asp-for="Id" hidden/>
+                <!--ColorName-->
+                <div>
+                    <label asp-for="ColorName" class="control-label col-md-3 col-xs-12"></label>
+                    <div class="col-md-9 col-xs-12">
+                        <input asp-for="ColorName" type="text" class="form-control custominput" placeholder="نام  ..." autocomplete="off" />
+                        <span asp-validation-for="ColorName" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <!--ColorCode-->
+                <div>
+                    <label asp-for="ColorCode" class="control-label col-md-3 col-xs-12"></label>
+                    <div class="col-md-9 col-xs-12">
+                        <input asp-for="ColorCode" type="color" class="form-control custominput" placeholder="Alt ..." autocomplete="off" />
+                        <span asp-validation-for="ColorCode" class="text-danger"></span>
+                    </div>
+                </div>
+
+              
+
+
+
+              
+
+                <!--IsDelete-->
+                <div>
+                    <label asp-for="IsDelete" class="control-label col-md-3 col-xs-12" style="margin-top:10px;"></label>
+                    <div class="col-md-9 col-xs-12" style="margin-top:10px;">
+                        <label class="col-md-3 col-xs-6">
+                            <input asp-for="IsDelete" type="radio" name="IsDelete" value="true"  />
+                            حذف شود
+                        </label>
+                        <label class="col-md-3 col-xs-6">
+                            <input asp-for="IsDelete" type="radio" name="IsDelete" value="false" checked/>
+                            حذف نشود
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-6 col-xs-12 pt-5">
+
+                <div class="col-xs-12 form-group" style="margin-top:15px;">
+                    <input type="submit" style="border:1px solid gray; border-radius:3px;"
+                           value="ثبت تغییرات جدید" class="btn pull-right" />
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+
+</div>
+
