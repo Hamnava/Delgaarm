@@ -5,6 +5,12 @@ VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delgaarm", "Delgaarm\Delgaarm.csproj", "{77C8AACE-0E52-42A4-B1E5-E93E1AAD45BD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delgaarm.API", "Delgaarm.API\Delgaarm.API.csproj", "{31465479-F32F-4D81-AF92-2ADCA2C63855}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{5127796E-FE45-4AAD-BAB7-794AD6BC4C11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastracture", "Infrastracture\Infrastracture.csproj", "{DE58B1AF-0D15-4BA5-A3D7-7D9C1FD992C6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,18 @@ Global
 		{77C8AACE-0E52-42A4-B1E5-E93E1AAD45BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{77C8AACE-0E52-42A4-B1E5-E93E1AAD45BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{77C8AACE-0E52-42A4-B1E5-E93E1AAD45BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31465479-F32F-4D81-AF92-2ADCA2C63855}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31465479-F32F-4D81-AF92-2ADCA2C63855}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31465479-F32F-4D81-AF92-2ADCA2C63855}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31465479-F32F-4D81-AF92-2ADCA2C63855}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5127796E-FE45-4AAD-BAB7-794AD6BC4C11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5127796E-FE45-4AAD-BAB7-794AD6BC4C11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5127796E-FE45-4AAD-BAB7-794AD6BC4C11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5127796E-FE45-4AAD-BAB7-794AD6BC4C11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE58B1AF-0D15-4BA5-A3D7-7D9C1FD992C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE58B1AF-0D15-4BA5-A3D7-7D9C1FD992C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE58B1AF-0D15-4BA5-A3D7-7D9C1FD992C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE58B1AF-0D15-4BA5-A3D7-7D9C1FD992C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
