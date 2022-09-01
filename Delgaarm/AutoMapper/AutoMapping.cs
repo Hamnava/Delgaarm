@@ -21,6 +21,7 @@ namespace Delgaarm.AutoMapper
             CreateMap<YourDesign, YourDesignViewModel>().ReverseMap();
             CreateMap<TailorSize, TailorViewModel>().ReverseMap();
             CreateMap<Slider, SliderViewModel>().ReverseMap();
+            CreateMap<Order, OrderViewModel>().ReverseMap();
 
         }
     }

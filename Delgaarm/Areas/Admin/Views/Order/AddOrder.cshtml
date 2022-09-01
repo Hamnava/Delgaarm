@@ -1,0 +1,105 @@
+﻿@model OrderViewModel
+
+@{
+    ViewData["Title"] = "Add Order";
+}
+
+<div class="right_col" role="main">
+
+
+    <div class="panel panel-heading" style="box-shadow:3px 1px 1px 0 gray; border-radius:2px;">
+        <span style="font-weight:bold;">
+            <i class="glyphicon glyphicon-plus"></i>
+            فرم ایجاد سفارش جدید
+        </span>
+    </div>
+
+    <div class="panel panel-body container-fluid" style="border-radius:2px; box-shadow:3px 1px 1px 0 gray; background-color:#e6e2e2;">
+        <form asp-controller="Order" asp-action="AddOrder" method="post" >
+
+            <div class="col-md-6 col-xs-12">
+
+                <div>
+                    <label class="control-label"> </label>
+                    <div class="col-md-9 col-xs-12">
+                    <select asp-for="UserId" class="form-select form-control custominput" asp-items="ViewBag.UserId">
+                        <option selected>انتخاب کاربر</option>
+                    </select>
+                    <span asp-validation-for="UserId" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div>
+                    <label  class="control-label"> </label>
+                    <div class="col-md-9 col-xs-12">
+                    <select asp-for="ProductId" class="form-select form-control custominput" asp-items="ViewBag.ProductId">
+                        <option selected>انتخاب محصول</option>
+                    </select>
+                    <span asp-validation-for="ProductId" class="text-danger"></span>
+                    </div>
+                </div>
+
+                 <!--OrderStatus-->
+                <div>
+                    <label asp-for="OrderStatus" class="control-label col-md-3 col-xs-12"></label>
+                    <div class="col-md-9 col-xs-12">
+                        <select class="form-control" asp-for="OrderStatus" class="form-select">
+                            <option value="1">در حال بررسی</option>
+                            <option value="2">تایید شده</option>
+                            <option value="3">در حال تحویل دادن</option>
+                            <option value="4">تحویل داده شد</option>
+                        </select>
+                    </div>
+                </div>
+                <!--PaymentStatus-->
+                <div>
+                    <label asp-for="PaymentStatus" class="control-label col-md-3 col-xs-12"></label>
+                    <div class="col-md-9 col-xs-12">
+                        <select class="form-control" asp-for="PaymentStatus" class="form-select">
+                            <option value="1">پرداخت شده </option>
+                            <option value="2"> پرداخت نشده</option>
+                           
+                        </select>
+                    </div>
+                </div>
+                <!--TotalAmount-->
+                <div>
+                    <label asp-for="TotalAmount" class="control-label col-md-3 col-xs-12"></label>
+                    <div class="col-md-9 col-xs-12">
+                        <input asp-for="TotalAmount" type="text" class="form-control custominput" placeholder=" قمیت مجموعی ..." autocomplete="off" />
+                        <span asp-validation-for="TotalAmount" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <!--ColorCode-->
+                <div>
+                    <label asp-for="TotalItem" class="control-label col-md-3 col-xs-12"></label>
+                    <div class="col-md-9 col-xs-12">
+                        <input asp-for="TotalItem"  class="form-control custominput" placeholder="تعداد محصول ..." autocomplete="off" />
+                        <span asp-validation-for="TotalItem" class="text-danger"></span>
+                    </div>
+                </div>
+
+              
+
+
+
+              
+
+
+            </div>
+
+            <div class="col-md-6 col-xs-12 pt-5">
+
+                <div class="col-xs-12 form-group" style="margin-top:15px;">
+                    <input type="submit" style="border:1px solid gray; border-radius:3px;"
+                           value="ثبت سفارش جدید" class="btn pull-right" />
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+
+</div>
+

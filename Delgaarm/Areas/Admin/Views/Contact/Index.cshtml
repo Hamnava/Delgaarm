@@ -1,0 +1,101 @@
+﻿
+@model IEnumerable<ContactUs>
+    @{
+    ViewData["Title"] = "Index";
+   
+    int counter = 1;
+    }
+    <style>
+        .customblue {
+            border: 1px solid gray;
+            border-radius: 3px;
+            color: black;
+            background-color: #6ee1be;
+        }
+
+        .customyellow {
+            border: 1px solid gray;
+            border-radius: 3px;
+            color: black;
+            background-color: #dce16e;
+        }
+
+        .customred {
+            border: 1px solid gray;
+            border-radius: 3px;
+            color: black;
+            background-color: #e17c6e;
+        }
+
+        .customgreen {
+            border: 1px solid gray;
+            border-radius: 3px;
+            color: black;
+            background-color: #77f272;
+        }
+    </style>
+
+    <div class="right_col" role="main">
+
+        <div class="panel panel-heading" style="box-shadow:3px 1px 1px 0 gray; border-radius:2px;">
+            <span style="font-weight:bold;">
+                <i class="glyphicon glyphicon-user"></i>
+                لیست پیام مشتریان 
+            </span>
+        </div>
+
+     
+
+        <div>
+            @*<div class="table-responsive">*@
+            <table class="table table-bordered table-striped table-hover" style="border-radius:2px; box-shadow:3px 3px 1px 0 gray;">
+                <thead>
+                    <tr>
+                        <td>ردیف</td>
+                        <td>نام</td>
+                        <td>ایمیل</td>
+                        <td>تاریخ ارسال</td>
+                      
+                        <td>عملیات</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                {
+                    <tr style="font-size:13px;">
+                        <td style="width:60px; text-align:center;">@counter</td>
+                        <td style="text-align:right;">@item.Name</td>
+                        <td style="text-align:right;">@item.Email</td>
+                        <td style="text-align:right;">@String.Format("{0:D}",  item.SentDate)</td>
+                        
+                      
+
+
+                        <td>
+
+                            <div class="row">
+                                <a asp-controller="Contact" asp-action="Details" asp-route-id="@item.Id"
+                                   style="height:30px; width:40px; font-size:10px; margin-bottom:3px;"
+                                   class="btn btn-info" title="خواندن">
+                                    <i class="glyphicon glyphicon-book"></i>
+
+                                </a>
+                            </div>
+
+                        </td>
+                    </tr>
+                    counter++;
+                }
+
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+
+    @Html.Partial("_Modal", new BootstrapModel { ID = "modal-action", Size = BootstrapModel.ModalSize.Large })
+
+    @section AdminScript{
+        <script src="~/js/modal/modal.js"></script>
+    }

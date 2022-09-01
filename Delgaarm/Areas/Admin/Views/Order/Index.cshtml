@@ -1,0 +1,169 @@
+﻿
+@model IEnumerable<Order>
+@{
+    ViewData["Title"] = "Index";
+    //Layout = "_AdminLayout";
+    int counter = 1;
+}
+<style>
+    .customblue {
+        border: 1px solid gray;
+        border-radius: 3px;
+        color: black;
+        background-color: #6ee1be;
+    }
+
+    .customyellow {
+        border: 1px solid gray;
+        border-radius: 3px;
+        color: black;
+        background-color: #dce16e;
+    }
+
+    .customred {
+        border: 1px solid gray;
+        border-radius: 3px;
+        color: black;
+        background-color: #e17c6e;
+    }
+
+    .customgreen {
+        border: 1px solid gray;
+        border-radius: 3px;
+        color: black;
+        background-color: #77f272;
+    }
+</style>
+
+<div class="right_col" role="main">
+
+    <div class="panel panel-heading" style="box-shadow:3px 1px 1px 0 gray; border-radius:2px;">
+        <span style="font-weight:bold;">
+            <i class="glyphicon glyphicon-user"></i>
+            لیست سفارشات دلگرم
+        </span>
+    </div>
+
+    <div style="margin-bottom:5px;">
+        <a class="btn btn-primary" asp-controller="Order" asp-action="AddOrder">
+            <i class="glyphicon glyphicon-plus"></i>
+            افزودن سفارش جدید
+        </a>
+    </div>
+
+    <div>
+        @*<div class="table-responsive">*@
+        <table class="table table-bordered table-striped table-hover" style="border-radius:2px; box-shadow:3px 3px 1px 0 gray;">
+            <thead>
+                <tr>
+                    <td>ردیف</td>
+                    <td>نام محصول</td>
+                    <td>مشتری</td>
+                    <td>قیمت مجموعی </td>
+                    <td> تعداد سفارش</td>
+                    <td>تاریخ سفارش</td>
+                    <td>از کشور</td>
+                    <td>وضعیت پرداخت</td>
+                    <td>حالت سفارش</td>
+                    <td>عملیات</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr style="font-size:13px;">
+                        <td style="width:20px; text-align:center;">@counter</td>
+                        <td style="text-align:right;">@item.Product.ProductName</td>
+                        <td>@item.User.FullName</td>
+                        <td>@item.TotalAmount</td>
+                        <td>@item.TotalItem</td>
+                        <td>@String.Format("{0:D}",  item.OrderTime)</td>
+                        <td>@item.User.Country</td>
+
+                        @if (item.OrderStatus==1)
+                        {
+                            <td style="width:100px; color:black;">
+                                <span class="badge badge-warning py-2" style="width:100px;padding:10px 2px; border-radius:15px; background-color:#FF5733 ">
+                                     در حال بررسی
+                                </span>
+                            </td>
+                        }
+                        else if(item.OrderStatus==2)
+                        {
+                            <td style="width:100px; color:black;">
+                                <span class="badge badge-success py-2" style="width:100px; padding:10px 2px;border-radius:15px; background-color:#28AD18 ">
+                                    تایید شده
+                                </span>
+                            </td>
+                        }
+                        else if(item.OrderStatus==3)
+                        {
+                            <td style="width:100px; color:black;">
+                                <span class="badge badge-info py-2" style="width:100px;padding:10px 2px; border-radius:15px; background-color:#13A37C  ">
+                                    در حال ارسال
+                                </span>
+                            </td>
+                        }
+                        else if(item.OrderStatus==4)
+                        {
+                            <td style="width:100px; color:black;">
+                                <span class="badge badge-success py-2" style="width:100px;padding:10px 2px; border-radius:15px; background-color:#0D8413  ">
+                                   تحویل داده شد
+                                </span>
+                            </td>
+                        }
+
+                        
+                        @if (item.PaymentStatus == 1)
+                        {
+                            <td style="width:100px; color:black;">
+                                <span class="badge badge-success py-2" style="width:100px; padding:10px 2px; border-radius:15px; background-color:#FF5733 ">
+                                    پرداخت شده
+                                </span>
+                            </td>
+                        }
+                        else if (item.PaymentStatus == 2 )
+                        {
+                            <td style="width:100px; color:black;">
+                                <span class="badge badge-danger py-2" style="width:100px;padding:10px 2px; border-radius:15px; background-color:#28AD18 ">
+                                   پرداخت نشده
+                                </span>
+                            </td>
+                        }
+                       
+                        <td>
+                            <div class="row">
+                                <a asp-controller="Order" asp-action="Details" asp-route-id="@item.Id"
+                                   style="height:30px; width:40px; font-size:10px; margin-bottom:3px;"
+                                   class="btn btn-info" title="جزییات">
+                                    <i class="glyphicon glyphicon-book"></i>
+
+                                </a>
+
+                                <a asp-controller="Order" asp-action="Edit" asp-route-id="@item.Id"
+                                   style="height:30px; width:40px; font-size:10px; margin-bottom:3px;"
+                                   class="btn btn-warning" title="ویرایش">
+                                    <i class="glyphicon glyphicon-edit"></i>
+
+                                </a>
+
+                               
+                            </div>
+
+                        </td>
+                    </tr>
+                    counter++;
+                }
+
+            </tbody>
+        </table>
+       
+    </div>
+</div>
+
+
+@Html.Partial("_Modal", new BootstrapModel { ID = "modal-action", Size = BootstrapModel.ModalSize.Large })
+
+@section AdminScript{
+    <script src="~/js/modal/modal.js"></script>
+}

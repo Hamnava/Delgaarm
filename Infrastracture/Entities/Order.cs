@@ -21,10 +21,10 @@ namespace Infrastracture.Entities
         public DateTime OrderTime { get; set; } = DateTime.UtcNow;
 
 
-        public string OrderStatus { get; set; } = "در حال بررسی";
+        public byte OrderStatus { get; set; } = 1;
 
 
-        public string PaymentStatus { get; set; }
+        public byte PaymentStatus { get; set; }
 
         public string UserId { get; set; }
 

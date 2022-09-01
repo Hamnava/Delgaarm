@@ -24,5 +24,6 @@ namespace Application.ViewModels
         public string PaymentStatus { get; set; }
 
         public string UserId { get; set; }
+        public int ProductId { get; set; }
     }
 }
