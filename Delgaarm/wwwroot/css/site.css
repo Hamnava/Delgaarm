@@ -73,3 +73,168 @@ body {
 .mainpic{
     background-image: url("/img/pexels-qualcomm-snapdragon-2333293.jpg")
 }
+
+
+.w-100 {
+    width:100%;
+    color:#ffffff !important;
+}
+.save-btn {
+    min-width: 100px;
+    margin: 10px auto
+}
+
+.admin-gallery .card:hover img {
+    transform: scale(1.2,1.2);
+    transition-duration: .5s;
+    transition-timing-function: ease-out;
+    opacity: .7;
+}
+
+.admin-gallery .card img {
+    transform: scale(1,1);
+    transition-duration: .5s;
+    transition-timing-function: ease-out;
+    opacity: 1;
+}
+
+.admin-gallery .card .card-img-wrapper {
+    overflow: hidden;
+    position: relative;
+}
+
+.admin-gallery .card .over-icon {
+    position: absolute;
+    bottom: -30%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0;
+}
+
+.card-img-wrapper:hover .over-icon {
+    bottom: 0;
+    opacity: 1;
+}
+
+.animate {
+    transition: all .3s ease-in-out;
+}
+
+
+@keyframes fa-blink {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.4;
+    }
+}
+.alertstyle {
+    box-shadow: 2px 2px 2px 0 gray;
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+.customBlue {
+    background-color: rgb(30, 154, 211);
+    color: white;
+    box-shadow: 2px 2px 2px 0 gray;
+}
+.customBlue:hover{
+    color:white;
+}
+.card-box {
+    background-color: rgba(0, 0, 0, 0.03);
+    border-radius: 2px;
+    box-shadow: 3px 3px 1px 0 gray;
+    align-items: center;
+}
+.bgcolor {
+    background-color: rgb(30, 154, 211) !important;
+    color:white;
+}
+.btn-coloredit {
+    background-color: rgb(30, 154, 211) !important;
+    color: white !important;
+    box-shadow: 2px 2px 2px 0 gray;
+    text-align:center;
+}
+.btn-color-del {
+    color: white !important;
+    box-shadow: 2px 2px 2px 0 gray;
+    text-align: center;
+
+}
+.btn-color-save {
+    color: white !important;
+    box-shadow: 2px 2px 2px 0 gray;
+}
+.imgsize {
+    width: 80px;
+    height: 70px;
+    margin: auto ;
+}
+.imgdetail {
+    width: 350px;
+    height: 250px;
+   
+    
+}
+.table-style {
+    border: 1px solid gray;
+    border-radius: 2px;
+    box-shadow: 3px 3px 1px 0 gray;
+    align-items: center;
+}
+.table-bg {
+    background-color: white;
+}
+.divstyle-detail {
+    box-shadow: 2px 2px 2px 0 gray;
+    background-color: var(--color-bg-5);
+}
+.btn-back {
+    background-color: rgb(30, 154, 211) !important;
+    color: white !important;
+    box-shadow: 2px 2px 2px 0 gray;
+    text-align: center
+}
+.register {
+    background-color: var(--color-bg-5);
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px 3px gray;
+    align-items: center;
+    border:1px solid gray;
+    margin-top:40px !important;
+
+}
+.wrapper{
+    position:relative;
+    display:flex;
+    min-width:100px;
+}
+.search {
+    border:1px solid grey;
+    height: 39px;
+    width: 170px !important;
+    border-radius: 5px;
+    align-items: center;
+    background-color:#f5f5f5;
+    outline:0;
+   
+}
+    .search:hover, .search:focus {
+        border: 1.5px solid #009688;
+        background-color: white;
+        width: 180px !important;
+    }
+.fabg {
+    background-color: rgb(30, 154, 211) !important;
+    height: 39px;
+    padding-left: 4px;
+    box-shadow: 1px 1px 1px 0 grey;
+    border-radius: 5px;
+}
+  
