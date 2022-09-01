@@ -7,6 +7,36 @@ using System.Threading.Tasks;
 
 namespace Application.ViewModels
 {
+
+    #region UserViewModels for API project
+    public class UserDTO
+    {
+        public string FullName { get; set; }
+        public string Email { get; set; }
+        public string Token { get; set; }
+
+    }
+
+    public class UserRegisterDTO
+    {
+        [Required(ErrorMessage = "Email feild should not be empty!")]
+        [EmailAddress(ErrorMessage = "Please enter a correct email address")]
+        public string Email { get; set; }
+
+        [Required(ErrorMessage = "Password field should not be empty")]
+        public string Password { get; set; }
+
+    }
+
+    public class LoginDTO
+    {
+        [Required(ErrorMessage = "Username feild should not be empty!")]
+        public string Username { get; set; }
+
+        [Required(ErrorMessage = "Password field should not be empty")]
+        public string Password { get; set; }
+    }
+    #endregion
     public class UserViewModel
     {
         [Display(Name = "جنس")]
@@ -40,5 +70,11 @@ namespace Application.ViewModels
         [Display(Name = "آدرس پستی")]
         [Required(ErrorMessage = "این فیلد نمیتواند خالی باشد")]
         public string PostalAddress { get; set; }
+    }
+
+    public class UserFullNameViewModel
+    {
+        public string UserId { get; set; }
+        public string UserFullName { get; set; }
     }
 }
