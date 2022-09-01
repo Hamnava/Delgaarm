@@ -18,18 +18,18 @@ namespace Infrastracture.Entities
 
         public byte producStars { get; set; }
         public string TekaType { get; set; }
-        public string? ProductImage { get; set; }
+        public string ProductImage { get; set; }
         public string Alt { get; set; }
         public string Title { get; set; }
 
         public string Description { get; set; }
-       
-        public DateTime ProductCreate { get; set; }
+
+        public DateTime ProductCreate { get; set; } = DateTime.UtcNow;
         public float MainPrice { get; set; }
         public int? sepcialprice { get; set; }
-        public bool IsNew { get; set; }
-        public bool IsActive { get; set; }
-        public bool IsDelete { get; set; }
+        public bool IsNew { get; set; } = true;
+        public bool IsActive { get; set; } = true;
+        public bool IsDelete { get; set; } = false;
         public int CategoryId { get; set; }
         public int ColorId { get; set; }
         public int count { get; set; }

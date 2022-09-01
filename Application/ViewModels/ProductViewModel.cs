@@ -11,6 +11,7 @@ namespace Application.ViewModels
         public int Id { get; set; }
         public string ProductName { get; set; }
         public bool IsBestSeller { get; set; }
+        public bool IsPrefered { get; set; }
         public byte producStars { get; set; }
         public string TekaType { get; set; }
         public string? ProductImage { get; set; }

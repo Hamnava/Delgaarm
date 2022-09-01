@@ -1,0 +1,119 @@
+﻿@model TailorSize
+
+@{
+    ViewData["Title"] = "add size";
+}
+
+<div class="right_col" role="main">
+
+
+    <div class="panel panel-heading" style="box-shadow:3px 1px 1px 0 gray; border-radius:2px;">
+        <span style="font-weight:bold;">
+            <i class="glyphicon glyphicon-plus"></i>
+            فرم ایجاد سایز جدید
+        </span>
+    </div>
+
+    <div class="panel panel-body container-fluid" style="border-radius:2px; box-shadow:3px 1px 1px 0 gray; background-color:#e6e2e2;">
+        <form asp-controller="Tailor" asp-action="Edit" method="post" >
+
+            <div class="col-md-6 col-xs-12">
+
+                <input asp-for="Id" hidden />
+                <!--Shane-->
+                <div>
+                    <label asp-for="Shane" class="control-label col-md-3 col-xs-12"></label>
+                    <div class="col-md-9 col-xs-12">
+                        <input asp-for="Shane" type="text" class="form-control custominput" placeholder="شانه  ..." autocomplete="off" />
+                        <span asp-validation-for="Shane" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <!--Astin-->
+                <div>
+                    <label asp-for="Astin" class="control-label col-md-3 col-xs-12"></label>
+                    <div class="col-md-9 col-xs-12">
+                        <input asp-for="Astin" type="text" class="form-control custominput" placeholder="آستین ..." autocomplete="off" />
+                        <span asp-validation-for="Astin" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <!--Kamar-->
+                <div>
+                    <label asp-for="Kamar" class="control-label col-md-3 col-xs-12"></label>
+                    <div class="col-md-9 col-xs-12">
+                        <input asp-for="Kamar" type="text" class="form-control custominput" placeholder="  اندازه کمر  ..." autocomplete="off" />
+                        <span asp-validation-for="Kamar" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <!--ZerBaghal-->
+                <div>
+                    <label asp-for="ZerBaghal" class="control-label col-md-3 col-xs-12"></label>
+                    <div class="col-md-9 col-xs-12">
+                        <input asp-for="ZerBaghal" type="text" class="form-control custominput" placeholder="زیر بغل ..." autocomplete="off" />
+                        <span asp-validation-for="ZerBaghal" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <!--Shelwar-->
+                <div>
+                    <label asp-for="Shelwar" class="control-label col-md-3 col-xs-12"></label>
+                    <div class="col-md-9 col-xs-12">
+                        <input asp-for="Shelwar" type="text" class="form-control custominput" placeholder="  اندازه شلوار ..." autocomplete="off" />
+                        <span asp-validation-for="Shelwar" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <!--MainPrice-->
+                <div>
+                    <label asp-for="perahan" class="control-label col-md-3 col-xs-12"></label>
+                    <div class="col-md-9 col-xs-12">
+                        <input asp-for="perahan" type="text" class="form-control custominput" placeholder="اندازه پیراهن  ..." autocomplete="off" />
+                        <span asp-validation-for="perahan" class="text-danger"></span>
+                    </div>
+                </div>
+
+              
+              
+
+            </div>
+
+            <div class="col-md-6 col-xs-12">
+
+                 <div>
+                    <label class="control-label"> </label>
+                    <div class="col-md-9 col-xs-12">
+                    <select asp-for="UserId" class="form-select form-control custominput" asp-items="ViewBag.UserId">
+                        <option selected>انتخاب رنگ</option>
+                    </select>
+                    <span asp-validation-for="UserId" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <!--Address-->
+                <div class="mt-5">
+                    <div class="col-md-12 col-xs-12 mt-4">
+                        <textarea asp-for="Detail" rows="8" type="text" class="form-control custominput" placeholder=" توضیحات  ..." autocomplete="off">
+                        </textarea>
+                        <span asp-validation-for="Detail" class="text-danger"></span>
+                    </div>
+                </div>
+
+               
+
+
+
+                <div class="col-xs-12 form-group" style="margin-top:15px;">
+                    <input type="submit" style="border:1px solid gray; border-radius:3px;"
+                           value="ثبت تغییرات جدید" class="btn pull-right" />
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+
+</div>
+
+

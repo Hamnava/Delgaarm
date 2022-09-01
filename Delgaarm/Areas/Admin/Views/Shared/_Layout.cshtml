@@ -26,6 +26,9 @@
     <link href="~/lib/MdPersiandatetimepicker/css/jquery.Bootstrap-PersianDateTimePicker.css" rel="stylesheet" />
     <!--JS Tree Css-->
     <link href="~/lib/jstree/dist/themes/default/style.css" rel="stylesheet" />
+
+      <!--CKEditor CSS-->
+    <link href="~/lib/ckeditor/prism_1.0.1/prism/lib/prism/prism_patched.min.css" rel="stylesheet" />
 </head>
 <!-- /header content -->
 <body class="nav-md">
@@ -74,7 +77,7 @@
 
                                 </li>
                                 <li>
-                                    <a asp-controller="JobsChart" asp-action="Index"><i class="fa fa-product"></i> محصولات <span class="fa fa-chevron-down"></span></a>
+                                    <a asp-controller="Product" asp-action="ShowProduct"><i class="fa fa-product"></i> محصولات <span class="fa fa-chevron-down"></span></a>
                                 </li>
                                  <li>
                                     <a asp-controller="JobsChart" asp-action="Index"><i class="fa fa-gallery"></i> گالری محصولات <span class="fa fa-chevron-down"></span></a>
@@ -277,6 +280,8 @@
 
     <script src="~/lib/jstree/dist/jstree.js"></script>
      @await Component.InvokeAsync("Notyf") 
+     <!--CKEditor JS-->
+    <script src="~/lib/ckeditor/prism_1.0.1/prism/lib/prism/prism_patched.min.js"></script>
     @RenderSection("AdminScript", required: false);
 
 </body>
