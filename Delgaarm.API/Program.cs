@@ -1,4 +1,5 @@
 using Application.API.Repository;
+using Application.Repositories.Interface;
 using Application.Repositories.Interfaces;
 using Application.Repositories.Services;
 using Application.Repository.Interfaces;
@@ -26,6 +27,7 @@ builder.Services.AddIdentityServices(builder.Configuration);
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<ITokenService, TokenService>();
+builder.Services.AddScoped<UserInterface, UserRepositoryService>();
 builder.Services.AddScoped<IProductRepasitory, ProductService>();
 #endregion
 // Add services to the container.
@@ -47,9 +49,22 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+app.UseSwagger();
+app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "API v1"));
 
+app.UseHttpsRedirection();
+app.UseRouting();
+app.UseCors(policy => policy.AllowAnyMethod()
+           .AllowAnyHeader()
+           .AllowCredentials()
+           .WithOrigins("http://localhost:3000", "https://localhost:3000", "http://localhost:3001",
+           "http://localhost:3002", "https://multipisos-frontend.netlify.app/"));
+
+app.UseAuthentication();
 app.UseAuthorization();
+
+app.UseDefaultFiles();
+app.UseStaticFiles();
 
 app.MapControllers();
 

@@ -12,7 +12,7 @@ namespace Application.ViewModels.API.Dtos
 
         public int TotalItem { get; set; }
 
-        public string PaymentStatus { get; set; }
+        public byte PaymentStatus { get; set; }
 
         public string UserId { get; set; }
 

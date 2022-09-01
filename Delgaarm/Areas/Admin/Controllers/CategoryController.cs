@@ -4,11 +4,13 @@ using Application.ViewModels;
 using AspNetCoreHero.ToastNotification.Abstractions;
 using AutoMapper;
 using Infrastracture.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Delgaarm.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize]
     public class CategoryController : Controller
     {
         private readonly IUnitOfWork _context;

@@ -1,8 +1,9 @@
 ﻿using Application.ViewModels;
 using Application.ViewModels.API.Dtos;
 using AutoMapper;
+using Delgaarm.API.Helpers;
 using Infrastracture.Entities;
-using Multipisus.API.Helpers;
+
 
 
 namespace Delgaarm.API.AutoMapper
@@ -12,6 +13,10 @@ namespace Delgaarm.API.AutoMapper
         public AutoMapperProfile()
         {
             CreateMap<UserRegisterDTO, ApplicationUser>().ReverseMap();
+
+            CreateMap<ApplicationUser, EditUserDto>().ReverseMap();
+            CreateMap<ApplicationUser, EditUserDto>()
+                 .ForMember(d => d.Profile, o => o.MapFrom<UserUrlResolver>());
 
             CreateMap<Slider, SliderDto>()
                .ForMember(d => d.sliderImage, o => o.MapFrom<SliderUrlResolver>());

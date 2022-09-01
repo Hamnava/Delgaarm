@@ -1,13 +1,18 @@
 ﻿using Application.API.Repository;
+using Application.Classes;
+using Application.Repositories.Interface;
+using Application.Repositories.Interfaces;
 using Application.ViewModels;
+using Application.ViewModels.API.Dtos;
 using AutoMapper;
+using Delgaarm.API.Helpers;
 using Delgraarm.API.Controllers;
 using Infrastracture.Entities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-
+using System.Security.Claims;
 
 namespace Delgaarm.API.Controllers
 {
@@ -15,21 +20,27 @@ namespace Delgaarm.API.Controllers
     public class AccountController : BaseAPIController
     {
         private readonly ITokenService _tokenService;
+        private readonly UserInterface _context;
         private readonly IMapper _mapper;
+        private readonly IUnitOfWork _unit;
+
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly RoleManager<IdentityRole> _roleManager;
         public AccountController(ITokenService tokenService, IMapper mapper,
                                   UserManager<ApplicationUser> userManager,
                                   SignInManager<ApplicationUser> signInManager,
-                                  RoleManager<IdentityRole> roleManager)
+                                  RoleManager<IdentityRole> roleManager,
+                                  UserInterface context,
+                                  IUnitOfWork unit)
         {
             _tokenService = tokenService;
+            _context = context;
             _mapper = mapper;
             _signInManager = signInManager;
             _userManager = userManager;
             _roleManager = roleManager;
-
+            _unit = unit;
         }
 
 
@@ -41,7 +52,7 @@ namespace Delgaarm.API.Controllers
                 return BadRequest("Username already exists!");
             }
             var user = _mapper.Map<ApplicationUser>(registerDTO);
-
+            user.UserName = registerDTO.Email;
             var result = await _userManager.CreateAsync(user, registerDTO.Password);
             if (!result.Succeeded) return BadRequest(result.Errors);
 
@@ -62,7 +73,7 @@ namespace Delgaarm.API.Controllers
 
             return new UserDTO
             {
-                
+                Id = user.Id,
                 Email = registerDTO.Email,
                 Token = await _tokenService.GetToken(user),
             };
@@ -79,14 +90,75 @@ namespace Delgaarm.API.Controllers
 
             return new UserDTO
             {
+                Id = user.Id,
                 Email = loginDTO.Username,
                 Token = await _tokenService.GetToken(user),
             };
         }
 
+        [HttpPut]
+        public async Task<ActionResult> UpdateMember(EditUserDto model, IFormFile file)
+        {
+            var user = await _userManager.FindByIdAsync(model.Id);
+            //var user = await _context.GetUserByUsernameAsync(User.GetUsername());
+            //update
+            if (file != null)
+            {
+                string imgname = "Img/Profile/" + FileUpload.CreateImg(file, "Profile");
+                bool DeleteImage = FileUpload.DeleteImg("Product", user.Profile);
+                model.Profile = imgname;
+            }
+            _mapper.Map(model, user);
+
+            _context.UpdateUser(user);
+
+            if (await _context.SaveAllAsync()) return NoContent();
+
+            return BadRequest("Faild to Update user!");
+        }
+
+
+        [HttpGet("Profile/{id}")]
+        public async Task<ActionResult> Profile(string id)
+        {
+            var userId = User.FindFirstValue(id);
+            var user = await _userManager.FindByIdAsync(userId);
+
+            var data = _mapper.Map<UserViewModel>(user);
+            return Ok(data);
+        }
+
         private async Task<bool> UserExist(string username)
         {
-            return await _userManager.Users.AnyAsync(u => u.Email == username);
+            return await _userManager.Users.AnyAsync(u => u.UserName == username);
         }
+
+        [HttpGet("Size/{id}")]
+        public async Task<ActionResult> Size(string id)
+        {
+            var data = await _unit.TialorSizeUW.GetByIdAsync(id);
+
+            return Ok(data);
+        }
+
+
+        [HttpPost]
+        public async Task<IActionResult> AddSize(TailorViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest("Your data is not validated");
+            }
+
+            var data = _mapper.Map<TailorSize>(model);
+
+            await _unit.TialorSizeUW.Create(data);
+            await _unit.saveAsync();
+
+            return Ok();
+
+        }
+
+
     }
 }

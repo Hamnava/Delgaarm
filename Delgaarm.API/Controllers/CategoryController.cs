@@ -3,11 +3,13 @@ using Application.ViewModels.API.Dtos;
 using AutoMapper;
 using Delgraarm.API.Controllers;
 using Infrastracture.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 
 namespace Application.API.Controllers
 {
+    //[Authorize]
     public class CategoryController : BaseAPIController
     {
         private readonly IMapper _mapper;

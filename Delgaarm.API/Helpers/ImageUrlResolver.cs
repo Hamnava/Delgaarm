@@ -1,15 +1,35 @@
-﻿using Application.ViewModels.API.Dtos;
+﻿using Application.ViewModels;
+using Application.ViewModels.API.Dtos;
 using AutoMapper;
 using Infrastracture.Entities;
 using Multipisus.Core.ViewModels.API.Dtos;
 
 
-namespace Multipisus.API.Helpers
+namespace Delgaarm.API.Helpers
 {
     public class ImageUrlResolver
     {
     }
 
+    // For EditUserDto Photo Url
+    public class UserUrlResolver : IValueResolver<ApplicationUser, EditUserDto, string>
+    {
+        private readonly IConfiguration _config;
+        public UserUrlResolver(IConfiguration config)
+        {
+            _config = config;
+        }
+
+        public string Resolve(ApplicationUser source, EditUserDto destination, string destMember, ResolutionContext context)
+        {
+            if (!string.IsNullOrEmpty(source.Profile))
+            {
+                return _config["ApiUrl"] + source.Profile;
+            }
+
+            return null;
+        }
+    }
 
     // For Slider Photo Url
     public class SliderUrlResolver : IValueResolver<Slider, SliderDto, string>
