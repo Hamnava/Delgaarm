@@ -43,11 +43,11 @@ builder.Services.AddSwaggerGen();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+//if (app.Environment.IsDevelopment())
+//{
+//    app.UseSwagger();
+//    app.UseSwaggerUI();
+//}
 
 app.UseSwagger();
 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "API v1"));
@@ -58,7 +58,7 @@ app.UseCors(policy => policy.AllowAnyMethod()
            .AllowAnyHeader()
            .AllowCredentials()
            .WithOrigins("http://localhost:3000", "https://localhost:3000", "http://localhost:3001",
-           "http://localhost:3002", "https://multipisos-frontend.netlify.app/"));
+           "http://localhost:3002"));
 
 app.UseAuthentication();
 app.UseAuthorization();

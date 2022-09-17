@@ -74,6 +74,7 @@ namespace Delgaarm.API.Controllers
             return new UserDTO
             {
                 Id = user.Id,
+                FullName = registerDTO.FullName,
                 Email = registerDTO.Email,
                 Token = await _tokenService.GetToken(user),
             };
@@ -91,6 +92,7 @@ namespace Delgaarm.API.Controllers
             return new UserDTO
             {
                 Id = user.Id,
+                FullName = user.FullName,
                 Email = loginDTO.Username,
                 Token = await _tokenService.GetToken(user),
             };

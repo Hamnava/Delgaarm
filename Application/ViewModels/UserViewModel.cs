@@ -24,6 +24,8 @@ namespace Application.ViewModels
         [EmailAddress(ErrorMessage = "Please enter a correct email address")]
         public string Email { get; set; }
 
+        public string FullName { get; set; }
+
         [Required(ErrorMessage = "Password field should not be empty")]
         public string Password { get; set; }
 

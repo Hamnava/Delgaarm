@@ -49,41 +49,41 @@ builder.Services.AddNotyf(config =>
 var app = builder.Build();
 
 //------Init EF database and demo user:
-using (IServiceScope serviceScope = ((IApplicationBuilder)app).ApplicationServices.GetService<IServiceScopeFactory>().CreateScope())
-{
-    var context = serviceScope.ServiceProvider.GetRequiredService<ApplicationContext>();
-    context.Database.EnsureCreated();
-    //context.Database.Migrate();
-    await context.Database.MigrateAsync();
-    var usrMgr = serviceScope.ServiceProvider.GetRequiredService<UserManager<ApplicationUser>>();
-    var _roleManager = serviceScope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+//using (IServiceScope serviceScope = ((IApplicationBuilder)app).ApplicationServices.GetService<IServiceScopeFactory>().CreateScope())
+//{
+//    var context = serviceScope.ServiceProvider.GetRequiredService<ApplicationContext>();
+//    context.Database.EnsureCreated();
+//    //context.Database.Migrate();
+//    await context.Database.MigrateAsync();
+//    var usrMgr = serviceScope.ServiceProvider.GetRequiredService<UserManager<ApplicationUser>>();
+//    var _roleManager = serviceScope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
 
-    var users = usrMgr.Users.ToList();
-    if (users.Count == 0)
-    {
-        var user = new ApplicationUser()
-        {
-            Email = "nematullahhussaini626l@gmail.com",
-            UserName = "nematullahhussaini626l",
-            IsActive = true,
-            IsAdmin = true,
-            EmailConfirmed = true,
+//    var users = usrMgr.Users.ToList();
+//    if (users.Count == 0)
+//    {
+//        var user = new ApplicationUser()
+//        {
+//            Email = "nematullahhussaini626l@gmail.com",
+//            UserName = "nematullahhussaini626l",
+//            IsActive = true,
+//            IsAdmin = true,
+//            EmailConfirmed = true,
 
-        };
-        usrMgr.CreateAsync(user, "Admin123*").Wait();
-        var userRole = _roleManager.FindByNameAsync("Admin");
-        if (userRole.Result == null)
-        {
-            var admin = new IdentityRole
-            {
-                Name = "Admin",
-                NormalizedName = "ADMIN"
-            };
-            _roleManager.CreateAsync(admin);
-        }
-        usrMgr.AddToRoleAsync(user, "Admin");
-    }
-}
+//        };
+//        usrMgr.CreateAsync(user, "Admin123*").Wait();
+//        var userRole = _roleManager.FindByNameAsync("Admin");
+//        if (userRole.Result == null)
+//        {
+//            var admin = new IdentityRole
+//            {
+//                Name = "Admin",
+//                NormalizedName = "ADMIN"
+//            };
+//            _roleManager.CreateAsync(admin);
+//        }
+//        usrMgr.AddToRoleAsync(user, "Admin");
+//    }
+//}
 //-----------------------------------
 #endregion
 

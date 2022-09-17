@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Delgaarm.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Authorize]
+    
     public class CategoryController : Controller
     {
         private readonly IUnitOfWork _context;
