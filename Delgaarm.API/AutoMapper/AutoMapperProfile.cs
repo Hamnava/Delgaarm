@@ -15,8 +15,8 @@ namespace Delgaarm.API.AutoMapper
             CreateMap<UserRegisterDTO, ApplicationUser>().ReverseMap();
 
             CreateMap<ApplicationUser, EditUserDto>().ReverseMap();
-            CreateMap<ApplicationUser, EditUserDto>()
-                 .ForMember(d => d.Profile, o => o.MapFrom<UserUrlResolver>());
+            //CreateMap<ApplicationUser, EditUserDto>()
+            //     .ForMember(d => d.Profile, o => o.MapFrom<UserUrlResolver>());
 
             CreateMap<Slider, SliderDto>()
                .ForMember(d => d.sliderImage, o => o.MapFrom<SliderUrlResolver>());

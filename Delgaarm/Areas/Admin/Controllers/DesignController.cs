@@ -25,16 +25,20 @@ namespace Delgaarm.Areas.Admin.Controllers
         }
 
 
+
+        //list of user
         public async Task<IActionResult> Index()
         {
-            return View(await _context.YourDesignUW.GetEntitiesAsync(null, null, "User"));
+            var design = await _context.YourDesignUW.GetEntitiesAsync( null,x=> x.OrderByDescending(x=> x.Id), "User");
+            return View(design);
         }
 
 
-        [HttpGet]
-        public async Task<IActionResult> Add()
+        public async Task<IActionResult> UserDesign(int id)
         {
-            ViewBag.UserId = new SelectList(await _context.UsermanagerUW.GetEntitiesAsync(), "Id", "User");
+            var user = await _context.UsermanagerUW.GetByIdAsync(id);
+            ViewBag.UserId = id;
+            ViewBag.Photo = user.Profile;
             return View();
         }
 

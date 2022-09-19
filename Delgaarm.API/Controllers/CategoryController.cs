@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Application.API.Controllers
 {
-    //[Authorize]
+    [Authorize]
     public class CategoryController : BaseAPIController
     {
         private readonly IMapper _mapper;

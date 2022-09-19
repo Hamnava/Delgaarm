@@ -98,23 +98,34 @@ namespace Delgaarm.API.Controllers
             };
         }
 
-        [HttpPut]
-        public async Task<ActionResult> UpdateMember(EditUserDto model, IFormFile file)
+        [HttpPut("update-userinfo")]
+        public async Task<ActionResult> fooo(EditUserDto dto)
         {
-            var user = await _userManager.FindByIdAsync(model.Id);
-            //var user = await _context.GetUserByUsernameAsync(User.GetUsername());
+            var user = await _context.GetUserByUsernameAsync(User.GetUsername());
+
+           var mapper = _mapper.Map(dto,user);
+            _context.UpdateUser(mapper);
+
+            if (await _context.SaveAllAsync()) return Ok();
+
+            return BadRequest("Faild to Update user!");
+        }
+        [HttpPut("update-profile")]
+        public async Task<ActionResult> UpdateMember(IFormFile file = null)
+        {
+            //var user = await _userManager.FindByIdAsync(model.Id);
+            var user = await _context.GetUserByUsernameAsync(User.GetUsername());
             //update
             if (file != null)
             {
                 string imgname = "Img/Profile/" + FileUpload.CreateImg(file, "Profile");
-                bool DeleteImage = FileUpload.DeleteImg("Product", user.Profile);
-                model.Profile = imgname;
+                bool DeleteImage = FileUpload.DeleteImg("Profile", user.Profile);
+                user.Profile = imgname;
             }
-            _mapper.Map(model, user);
 
             _context.UpdateUser(user);
 
-            if (await _context.SaveAllAsync()) return NoContent();
+            if (await _context.SaveAllAsync()) return Ok();
 
             return BadRequest("Faild to Update user!");
         }

@@ -21,6 +21,8 @@ namespace Infrastracture.Entities
         public string ProductImage { get; set; }
         public string Alt { get; set; }
         public string Title { get; set; }
+        public string ProductCode { get; set; }
+        public string Slag { get; set; }
 
         public string Description { get; set; }
 

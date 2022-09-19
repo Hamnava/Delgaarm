@@ -30,6 +30,9 @@ namespace Application.ViewModels.API.Dtos
         public string CategoryName { get; set; }
         public string ColorName { get; set; }
         public string ColorCode { get; set; }
+        public string ProductCode { get; set; }
+        public string Slag { get; set; }
+        public int CategoryId { get; set; }
     }
 
    public class ProductGalleryDTO

@@ -18,6 +18,13 @@ namespace Application.ViewModels
 
     }
 
+    public class AuthFaildDto
+    {
+        public bool IsAuthSuccessful { get;set;}
+        public string ErrorMessage { get; set; }
+                        
+    }
+
     public class UserRegisterDTO
     {
         [Required(ErrorMessage = "Email feild should not be empty!")]

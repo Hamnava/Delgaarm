@@ -1,4 +1,4 @@
-﻿@model TailorSize
+﻿@model  TailorViewModel
 
 @{
     ViewData["Title"] = "add size";
@@ -65,7 +65,7 @@
                     </div>
                 </div>
 
-                <!--MainPrice-->
+                <!--perahan-->
                 <div>
                     <label asp-for="perahan" class="control-label col-md-3 col-xs-12"></label>
                     <div class="col-md-9 col-xs-12">
@@ -85,13 +85,13 @@
                     <label class="control-label"> </label>
                     <div class="col-md-9 col-xs-12">
                     <select asp-for="UserId" class="form-select form-control custominput" asp-items="ViewBag.UserId">
-                        <option selected>انتخاب رنگ</option>
+                        <option selected>انتخاب کاربر</option>
                     </select>
                     <span asp-validation-for="UserId" class="text-danger"></span>
                     </div>
                 </div>
 
-                <!--Address-->
+                <!--Detail-->
                 <div class="mt-5">
                     <div class="col-md-12 col-xs-12 mt-4">
                         <textarea asp-for="Detail" rows="8" type="text" class="form-control custominput" placeholder=" توضیحات  ..." autocomplete="off">
